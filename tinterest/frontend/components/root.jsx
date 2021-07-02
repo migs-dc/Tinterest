@@ -9,7 +9,8 @@ import { HashRouter } from 'react-router-dom';
 const Root = ({ store }) => (
   <Provider store={store}>
     <HashRouter>
-      <App />
+      {/* <App /> */}
+      <h1>welcome to tinterest</h1>
     </HashRouter>
   </Provider>
 );
