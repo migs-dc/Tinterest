@@ -1,16 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
-
-// import App from './app';
-
-// NB: this file is complete - you do not to write/edit anything!
+import App from "./App";
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <HashRouter>
-      {/* <App /> */}
-      <h1>welcome to tinterest</h1>
+      <App />
     </HashRouter>
   </Provider>
 );
