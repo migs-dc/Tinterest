@@ -5,8 +5,13 @@ const App = () => (
   <div>
     <header>
       <h1>Tinterest</h1>
+      <p>hi</p>
       <GreetingContainer />
+      <p>hello</p>
     </header>
+
+    <Route path="/login" component={LoginFormContainer} />
+    <Route path="/signup" component={SignupFormContainer} />
   </div>
 );
 
