@@ -54,6 +54,11 @@ class SessionForm extends React.Component {
                 className="login-input"
               />
             </label>
+            { 
+              if(this.props.formType){
+                <h1>hi</h1>
+              }
+            }
             <br/>
             <label>Password: <br/>
               <input type="password"
@@ -68,6 +73,7 @@ class SessionForm extends React.Component {
 
             <br/> or
             <br/> <button>{this.props.navLink}</button>
+            <br/> <button>Demo User</button>
           </div>
         </form>
       </div>

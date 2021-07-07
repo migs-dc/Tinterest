@@ -54,6 +54,19 @@
     }
   }
 
+  button:last-of-type {  
+    background: rgba(171, 71  , 188, 1); 
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border-radius: 50px;
+    border: 0px solid rgb(231, 228, 228);
+    width: 190px;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: white;  
+  }
+
   button:hover, input.session-submit:hover{
     background: lightgrey;
     cursor: pointer;
