@@ -9,6 +9,7 @@ class SignupForm extends React.Component {
       email: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.loginDemoUser = this.loginDemoUser.bind(this);
   }
 
   update(field) {
@@ -26,7 +27,7 @@ class SignupForm extends React.Component {
   loginDemoUser(demoUser) {
     return e => {
       e.preventDefault()
-      this.props.processForm(demoUser);
+      this.props.loginForm(demoUser);
     }
   }
 
@@ -82,7 +83,10 @@ class SignupForm extends React.Component {
 
             <br/> or
             <br/> <button>Sign up</button>
-            <br/> <button>Demo User</button>
+            <br/>
+            <button onClick={this.loginDemoUser(demoUser)}>
+              Demo User
+            </button>
           </div>
         </form>
       </div>
