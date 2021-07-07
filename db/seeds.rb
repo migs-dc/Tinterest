@@ -17,3 +17,15 @@ u2 = User.create!(
   password: 'password',
   email: 'demo2@email.com'
 )
+
+p1 = Pin.create!(
+  title: 'Pied crow digital painting',
+  user_id: 1,
+  image_url: "https://imgur.com/3GChGMb"
+)
+
+p1 = Pin.create!(
+  title: 'American crow digital painting',
+  user_id: 1,
+  image_url: "https://imgur.com/CBaJlHS"
+)

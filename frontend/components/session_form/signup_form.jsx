@@ -23,6 +23,13 @@ class SignupForm extends React.Component {
     this.props.processForm(user);
   }
 
+  loginDemoUser(demoUser) {
+    return e => {
+      e.preventDefault()
+      this.props.processForm(demoUser);
+    }
+  }
+
   renderErrors() {
     return(
       <ul className="errors">
@@ -36,6 +43,10 @@ class SignupForm extends React.Component {
   }
 
   render() {
+    const demoUser = {
+      email: "demo@email.com",
+      password: "password"
+    }
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
