@@ -1,0 +1,35 @@
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px 0 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+div.login-signup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  list-style-type: none;
+
+  > button {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 0px solid rgb(231, 228, 228);
+  }
+
+  > button:first-of-type {
+    margin-left: 10px;
+    font-size: 15px;      
+  }
+
+  > button:hover {
+    background: lightgrey;
+  }
+}
+
