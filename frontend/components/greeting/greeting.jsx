@@ -14,8 +14,8 @@ const Greeting = ({ currentUser, logout }) => {
       <Link> {/* maybe link to profile? */}
         <h3 className="header-name">{currentUser.username}</h3>
       </Link>
-      <button className="pb"><Link>Pins</Link></button>
-      <button className="pb"><Link>Boards</Link></button>
+      <button className="pb">Pins</button>
+      <button className="pb">Boards</button>
       <button className="header-button" onClick={logout}>Log out</button>
     </hgroup>
   );
