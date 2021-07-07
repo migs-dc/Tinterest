@@ -42,6 +42,10 @@ class LoginForm extends React.Component {
     );
   }
 
+  componentWillUnmount(){
+    this.props.clearErrors()
+  }
+
   render() {
     const demoUser = {
       email: "demo@email.com",
@@ -74,7 +78,8 @@ class LoginForm extends React.Component {
             <input className="session-submit" type="submit" value='Log in' />
 
             <br/> or
-            <br/> <button>Sign up</button> <br/> 
+            <br/> <button type="button">{this.props.navLink}</button>
+            <br/> 
             <button onClick={this.loginDemoUser(demoUser)}>
               Demo User
             </button>

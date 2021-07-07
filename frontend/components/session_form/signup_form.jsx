@@ -43,6 +43,10 @@ class SignupForm extends React.Component {
     );
   }
 
+  componentWillUnmount(){
+    this.props.clearErrors()
+  }
+
   render() {
     const demoUser = {
       email: "demo@email.com",
@@ -80,15 +84,15 @@ class SignupForm extends React.Component {
             </label> <br/>
             
             <input className="session-submit" type="submit" value='Sign up' />
-
+            
             <br/> or
-            <br/> <button>Sign up</button>
-            <br/>
-            <button onClick={this.loginDemoUser(demoUser)}>
+            <br/> <button type="button">{this.props.navLink}</button>
+            <br/> 
+            <button type="button" onClick={this.loginDemoUser(demoUser)}>
               Demo User
-            </button>
-          </div>
-        </form>
+            </button>    
+          </div> 
+        </form>       
       </div>
     );
   }
