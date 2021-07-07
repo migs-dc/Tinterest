@@ -1,6 +1,7 @@
 .login-form-container {
-  padding: 20px;
+  padding: 20px 0 20px 0;
   border-bottom: 1px solid lightgrey;
+  color: grey;
 
   > form {
     margin: 0 auto 0 auto;
@@ -9,5 +10,52 @@
 
   p {
     font-size: 40px;
+    margin: 0 0 0 0;
+    color: rgba(0, 0, 0, 0.822);
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid lightgrey;
+  }
+
+  input:hover {
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgb(154, 195, 233);
+  }
+
+  input.session-submit {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+  
+    background: rgba(230, 0, 35, 1); 
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border-radius: 50px;
+    border: 0px solid rgb(231, 228, 228);
+    width: 190px;
+  }
+
+  button {  
+    background: rgba(24, 119, 242, 1); 
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border-radius: 50px;
+    border: 0px solid rgb(231, 228, 228);
+    width: 190px;
+
+    a {
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  button:hover, input.session-submit:hover{
+    background: lightgrey;
+    cursor: pointer;
   }
 }

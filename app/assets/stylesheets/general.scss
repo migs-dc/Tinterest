@@ -3,6 +3,12 @@ a{
   color: black;
 }
 
+a:hover {
+  // color: rgb(206, 182, 182);
+  text-decoration: underline;
+  // 
+}
+
 body {
   margin: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

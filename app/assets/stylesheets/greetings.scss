@@ -28,7 +28,7 @@ div.login-signup {
     font-weight: bold;
     color: black;
 
-    margin-left: 15px;
+    margin-right: 12px;
     padding: 10px;
     border-radius: 50px;
     border: 0px solid rgb(231, 228, 228);
@@ -46,3 +46,27 @@ div.login-signup {
   }
 }
 
+// personalGreeting (logged in user)
+
+.header-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  button {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+
+    background: rgba(230, 0, 35, 1); 
+    margin: 10px 15px 10px 15px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 0px solid rgb(231, 228, 228);
+  }
+
+  button:hover {
+    background: lightgrey;
+    cursor: pointer;
+  }
+}
