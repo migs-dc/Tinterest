@@ -5,6 +5,17 @@
   border-bottom: 1px solid lightgray;
 }
 
+.header-link{
+  color: rgba(230, 0, 35, 1);  
+  font-weight: 600;
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // font-weight: 400;
+}
+
 div.login-signup {
   display: flex;
   flex-direction: row;
@@ -24,8 +35,10 @@ div.login-signup {
   }
 
   > button:first-of-type {
-    margin-left: 10px;
-    font-size: 15px;      
+    background: rgba(230, 0, 35, 1);    
+    > a {
+      color: white;
+    }
   }
 
   > button:hover {

@@ -1,0 +1,13 @@
+.login-form-container {
+  padding: 20px;
+  border-bottom: 1px solid lightgrey;
+
+  > form {
+    margin: 0 auto 0 auto;
+    text-align: center;
+  }
+
+  p {
+    font-size: 40px;
+  }
+}
