@@ -1,6 +1,17 @@
+ul.errors {
+  margin-left: -40px; // manually adjusted gotta fix that
+  list-style-type: none;
+  color: rgba(230, 0, 35, 1);
+}
+
 .login-form-container {
+  height: 75%;
+  width: 50%;
+
   padding: 20px 0 20px 0;
-  border-bottom: 1px solid lightgrey;
+  margin: 10px auto 0 auto;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
   color: grey;
 
   > form {
@@ -61,3 +72,4 @@
     cursor: pointer;
   }
 }
+

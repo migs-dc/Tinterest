@@ -4,7 +4,7 @@ class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // username: '',
+      username: '',
       password: '',
       email: ''
     };
@@ -25,7 +25,7 @@ class SignupForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className="errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -39,7 +39,7 @@ class SignupForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" class="logo"/>
+          <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" className="logo"/>
           <br/> 
           <p>Welcome to Tinterest</p>
           {this.renderErrors()}

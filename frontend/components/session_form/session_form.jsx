@@ -39,7 +39,7 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" class="logo"/>
+          <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" className="logo"/>
           <br/> 
           <p>Welcome to Tinterest</p>
           {this.renderErrors()}

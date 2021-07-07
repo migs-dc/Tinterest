@@ -9,7 +9,7 @@ const App = () => (
   <div>
     <header className="top-nav">
       <Link to="/" className="header-link">
-        <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" class="logo"/>
+        <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" className="logo"/>
         <p>Tinterest</p>
       </Link>
       <GreetingContainer />
