@@ -12,8 +12,7 @@ class PinsIndex extends React.Component{
 
     render(){
         return(
-            <div>
-                <h1>Pins: </h1>
+            <div className="pin-index">
                 {this.props.pins.map(pin => (
                     <PinsIndexItem pin={pin} key={pin.id}/>))
                 }

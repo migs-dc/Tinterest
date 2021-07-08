@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -53,9 +54,15 @@ class SignupForm extends React.Component {
       password: "password"
     }
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+      <div className="form-container">
+        <form onSubmit={this.handleSubmit} className="form-box">
+          <input type="hidden" 
+          name="authenticity_token" 
+          value="<%= form_authenticity_token %>"/>
+          
+          <div className="close-button">
+            <Link to="/">X</Link>
+          </div>
           
           <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" className="logo"/>
           <br/> 

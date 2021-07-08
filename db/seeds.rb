@@ -24,8 +24,32 @@ p1 = Pin.create!(
   image_url: "https://imgur.com/3GChGMb"
 )
 
-p1 = Pin.create!(
+p2 = Pin.create!(
   title: 'American crow digital painting',
   user_id: 1,
+  image_url: "https://imgur.com/CBaJlHS"
+)
+
+p3 = Pin.create!(
+  title: 'three',
+  user_id: 2,
+  image_url: "https://imgur.com/CBaJlHS"
+)
+
+p4 = Pin.create!(
+  title: 'four',
+  user_id: 2,
+  image_url: "https://imgur.com/CBaJlHS"
+)
+
+p5 = Pin.create!(
+  title: 'five',
+  user_id: 2,
+  image_url: "https://imgur.com/CBaJlHS"
+)
+
+p6 = Pin.create!(
+  title: 'six',
+  user_id: 2,
   image_url: "https://imgur.com/CBaJlHS"
 )

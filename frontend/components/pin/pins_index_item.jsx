@@ -9,12 +9,8 @@ class PinsIndexItem extends React.Component {
     const { title, user_id, image_url } = this.props.pin;
 
     return (
-      <div>
-        <ul>
-          <li>{title}</li>
-          <li>{user_id}</li>
-          <li><img src={window.crow1}/></li>
-        </ul>
+      <div class="pin">
+        <img className="test" src={window.crow1} />
       </div>
     )  
   }

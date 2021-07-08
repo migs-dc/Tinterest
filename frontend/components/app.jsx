@@ -9,6 +9,11 @@ import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
+    <Switch>
+      <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    </Switch>    
+
     <header className="top-nav">
       <Link to="/" className="header-link">
         <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" className="logo"/>
@@ -17,11 +22,7 @@ const App = () => (
       <GreetingContainer />
     </header>
 
-    <Switch>
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <Route exact path="/" component={PinsIndexContainer} />
-    </Switch>    
+    <PinsIndexContainer />
   </div>
 );
 

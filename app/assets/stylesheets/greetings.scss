@@ -1,7 +1,9 @@
 .top-nav {
-  // position: absolute;
+  // position: relative;
   display: flex;
   justify-content: space-between;
+
+  // width: 100%;
   padding: 0px 20px 0 20px;
   border-bottom: 1px solid lightgray;
 }
