@@ -4,6 +4,7 @@ import GreetingContainer from "./greeting/greeting_container";
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import PinsIndexContainer from './pin/pins_index_container';
+import PinShowContainer from './pin/pin_show_container';
 
 import { AuthRoute } from '../util/route_util';
 
@@ -21,8 +22,11 @@ const App = () => (
       </Link>
       <GreetingContainer />
     </header>
-
-    <PinsIndexContainer />
+    
+    <Switch>
+      <Route exact path="/pins/:pinId" component={PinShowContainer} />
+      <PinsIndexContainer />
+    </Switch>
   </div>
 );
 

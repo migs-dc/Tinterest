@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 class PinsIndexItem extends React.Component {
   constructor(props){
@@ -6,13 +7,13 @@ class PinsIndexItem extends React.Component {
   }
 
   render() {
-    const { title, user_id, image_url } = this.props.pin;
+    const { id, title, user_id, image_url } = this.props.pin;
 
     return (
-      <div class="pin">
-        <img className="test" src={window.crow1} />
-        <img className="test" src={window.crow2} />
-        <img className="test" src={window.crow3} />
+      <div className="pin">
+        <Link to={`pins/${id}`}>
+          <img className="test" src={window.crow1} />
+        </Link>
       </div>
     )  
   }

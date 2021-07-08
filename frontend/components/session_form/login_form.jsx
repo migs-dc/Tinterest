@@ -62,7 +62,7 @@ class LoginForm extends React.Component {
           <div className="close-button">
             <Link to="/">X</Link>
           </div>
-          <br />
+
           <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" className="logo"/>
           <br/> 
           <p>Welcome to Tinterest</p>
