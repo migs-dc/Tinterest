@@ -1,9 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import PinsIndexItem from './pins_index_item'
 
-const PinsIndex () => {
+class PinsIndex extends React.Component{
+    constructor(props){
+        super(props)
+    }
 
-  return [];
+    componentDidMount(){
+        this.props.fetchPins();
+    }
+
+    render(){
+        return(
+            <div>
+                <h1>Pins: </h1>
+                {this.props.pins.map(pin => (
+                    <PinsIndexItem pin={pin} key={pin.id}/>))
+                }
+            </div>
+        )
+    }
 }
 
 export default PinsIndex;

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import GreetingContainer from "./greeting/greeting_container";
-import LoginFormContainer from './session_form/login_form_container'
-import SignupFormContainer from './session_form/signup_form_container'
+import LoginFormContainer from './session_form/login_form_container';
+import SignupFormContainer from './session_form/signup_form_container';
+import PinsIndexContainer from './pin/pins_index_container';
 
 import { AuthRoute } from '../util/route_util';
 
@@ -19,7 +20,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      {/* <AuthRoute exact path="/pins" component={PinsIndexContainer} /> */}
+      <Route exact path="/" component={PinsIndexContainer} />
     </Switch>    
   </div>
 );

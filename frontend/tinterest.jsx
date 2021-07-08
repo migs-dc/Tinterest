@@ -4,6 +4,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 
 import { signup, login, logout } from './util/session_api_util'
+import { fetchPins } from './actions/pin_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.logout = logout;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchPins = fetchPins;
   
   // const store = configureStore();
   const root = document.getElementById('root');

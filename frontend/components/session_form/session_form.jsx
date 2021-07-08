@@ -39,6 +39,8 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+          
           <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" className="logo"/>
           <br/> 
           <p>Welcome to Tinterest</p>
@@ -53,6 +55,7 @@ class SessionForm extends React.Component {
                 onChange={this.update('username')}
               />
             </label>
+
             <br/>
             <label>Password: <br/>
               <input type="password"
@@ -61,6 +64,7 @@ class SessionForm extends React.Component {
                 onChange={this.update('password')}
               />
             </label>
+            
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
 

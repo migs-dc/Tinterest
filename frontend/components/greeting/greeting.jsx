@@ -11,9 +11,7 @@ const Greeting = ({ currentUser, logout }) => {
 
   const personalGreeting = () => (
     <hgroup className="header-group">
-      <Link> {/* maybe link to profile? */}
-        <h3 className="header-name">{currentUser.username}</h3>
-      </Link>
+      <h3 className="header-name">{currentUser.username}</h3>
       <button className="pb">Pins</button>
       <button className="pb">Boards</button>
       <button className="header-button" onClick={logout}>Log out</button>
