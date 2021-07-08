@@ -11,6 +11,8 @@ class PinsIndexItem extends React.Component {
     return (
       <div class="pin">
         <img className="test" src={window.crow1} />
+        <img className="test" src={window.crow2} />
+        <img className="test" src={window.crow3} />
       </div>
     )  
   }

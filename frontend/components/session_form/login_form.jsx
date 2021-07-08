@@ -89,7 +89,7 @@ class LoginForm extends React.Component {
             <input className="session-submit" type="submit" value='Log in' />
 
             <br/> or
-            <br/> <button type="button">{this.props.navLink}</button>
+            <br/> {this.props.navLink}
             <br/> 
             <button onClick={this.loginDemoUser(demoUser)}>
               Demo User

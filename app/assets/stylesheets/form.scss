@@ -74,9 +74,16 @@ ul.errors {
       border: 0px solid rgb(231, 228, 228);
       width: 190px;
     }
-  
+
+    a {
+      color: black;
+
+      button {
+        background: rgba(24, 119, 242, 1); 
+      }
+    }
+
     button {  
-      background: rgba(24, 119, 242, 1); 
       margin: 10px 0 10px 0;
       padding: 10px;
       border-radius: 50px;
@@ -86,16 +93,6 @@ ul.errors {
       font-size: 15px;
       font-weight: bold;
       color: white;
-  
-      a {
-        font-size: 15px;
-        font-weight: bold;
-        color: white;
-      }
-
-    }
-
-    button:last-of-type {  
       background: rgba(171, 71  , 188, 1);
     }
   
