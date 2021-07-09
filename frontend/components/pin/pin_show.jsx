@@ -20,6 +20,7 @@ class pinShow extends React.Component {
         <div className="pin-show">
           <h2>{this.props.pin.user_id}</h2>
           <p>{this.props.pin.title}</p>
+          <p>{this.props.pin.image_url}</p>
           <img className="test" src={window.crow1} />
         </div>
       )

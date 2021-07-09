@@ -5,6 +5,7 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import PinsIndexContainer from './pin/pins_index_container';
 import PinShowContainer from './pin/pin_show_container';
+import CreatePinContainer from './pin/create_pin_form_container'
 
 import { AuthRoute } from '../util/route_util';
 
@@ -24,9 +25,11 @@ const App = () => (
     </header>
     
     <Switch>
+      <Route exact path="/create_pin" component={CreatePinContainer} />
       <Route exact path="/pins/:pinId" component={PinShowContainer} />
       <PinsIndexContainer />
     </Switch>
+
   </div>
 );
 

@@ -19,13 +19,13 @@ u2 = User.create!(
 )
 
 p1 = Pin.create!(
-  title: 'Pied crow digital painting',
+  title: 'Pied crow',
   user_id: 1,
   image_url: "https://imgur.com/3GChGMb"
 )
 
 p2 = Pin.create!(
-  title: 'American crow digital painting',
+  title: 'American crow',
   user_id: 1,
   image_url: "https://imgur.com/CBaJlHS"
 )
@@ -39,17 +39,20 @@ p3 = Pin.create!(
 p4 = Pin.create!(
   title: 'four',
   user_id: 2,
-  image_url: "https://imgur.com/CBaJlHS"
+  image_url: "https://imgur.com/CBaJlHS",
+  description: "number four description"
 )
 
 p5 = Pin.create!(
   title: 'five',
   user_id: 2,
-  image_url: "https://imgur.com/CBaJlHS"
+  image_url: "https://imgur.com/CBaJlHS",
+  description: "number five description"
 )
 
 p6 = Pin.create!(
   title: 'six',
   user_id: 2,
-  image_url: "https://imgur.com/CBaJlHS"
+  image_url: "https://imgur.com/CBaJlHS",
+  description: "number six description"
 )
