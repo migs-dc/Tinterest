@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class pinShow extends React.Component {
   constructor(props) {
@@ -23,6 +24,8 @@ class pinShow extends React.Component {
           <p>Description: {this.props.pin.description}</p>
           <p>Image URL: {this.props.pin.image_url}</p>
           <img className="test" src={window.crow1} />
+          <Link to={`${this.props.pin.id}/edit`}>Edit Pin</Link>
+          {/* <Link to={`pins/${this.props.pin.id}/edit`}>Edit Pin</Link> */}
         </div>
       )
     }

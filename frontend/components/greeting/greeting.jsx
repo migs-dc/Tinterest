@@ -12,7 +12,7 @@ const Greeting = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <hgroup className="header-group">
       <h3 className="header-name">{currentUser.username}</h3>
-      <Link to="/create_pin"><button className="pb">Create Pin</button></Link>
+      <Link to="/create-pin"><button className="pb">Create Pin</button></Link>
       <button className="pb">Boards</button>
       <button className="header-button" onClick={logout}>Log out</button>
     </hgroup>

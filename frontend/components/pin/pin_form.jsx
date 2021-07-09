@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class PinForm extends React.Component {
   constructor(props){
@@ -15,7 +16,8 @@ class PinForm extends React.Component {
   }
 
   handleSubmit() {
-    this.props.action(this.state);
+    this.props.action(this.state)
+      .then(res => this.props.history.push(`pins/${res.pin.id}`))
   }
 
   render() {
@@ -45,7 +47,7 @@ class PinForm extends React.Component {
           />
         </label>
         <br />
-        <input type="submit" value={this.props.formType} />
+        <input type="submit" value={this.props.formType} />        
       </form>
     )
   }

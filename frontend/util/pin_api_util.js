@@ -15,7 +15,15 @@ export const fetchPin = id => (
 export const createPin = pin => (
   $.ajax({
     method: 'POST',
-    url: 'api/pins',
+    url: `/api/pins/`,
+    data: { pin }
+  })
+)
+
+export const updatePin = pin => (
+  $.ajax({
+    url: `/api/pins/${pin.id}`,
+    method: 'PATCH',
     data: { pin }
   })
 )

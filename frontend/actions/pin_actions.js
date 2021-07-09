@@ -19,11 +19,8 @@ export const fetchPins = () => dispatch => APIUtil.fetchPins()
 export const fetchPin = id => dispatch => APIUtil.fetchPin(id)
   .then(pin => dispatch(receivePin(pin)))
 
-// export const createPin = pin => dispatch => APIUtil.createPin(pin)
-//   .then(pin => dispatch(receivePin(pin)))
+export const createPin = pin => dispatch => APIUtil.createPin(pin)
+  .then(pin => dispatch(receivePin(pin)))
 
-export const createPin = pin => dispatch => (
-  APIUtil.createPin(pin).then(pin => (
-    dispatch(receivePin(pin))
-  ))
-);
+export const updatePin = pin => dispatch => APIUtil.updatePin(pin)
+  .then(updatedPin => dispatch(receivePin(updatedPin)))
