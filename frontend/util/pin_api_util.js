@@ -22,8 +22,8 @@ export const createPin = pin => (
 
 export const updatePin = pin => (
   $.ajax({
-    url: `/api/pins/${pin.id}`,
     method: 'PATCH',
+    url: `/api/pins/${pin.id}`,
     data: { pin }
   })
 )

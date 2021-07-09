@@ -18,6 +18,7 @@ class PinForm extends React.Component {
   handleSubmit() {
     this.props.action(this.state)
       .then(res => this.props.history.push(`pins/${res.pin.id}`))
+      // .then(res => console.log(res))
   }
 
   render() {
