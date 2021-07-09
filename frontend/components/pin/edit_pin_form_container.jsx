@@ -1,5 +1,5 @@
 import React from 'react'
-import {connect } from 'react-redux'
+import { connect } from 'react-redux'
 import PinForm from './pin_form'
 import { fetchPin, updatePin } from '../../actions/pin_actions'
 
@@ -24,6 +24,7 @@ class EditPinForm extends React.Component {
 
 const mSTP = (state, ownProps) => ({
   pin: state.entities.pins[ownProps.match.params.pinId],
+  errors: state.errors.session,
   formType: 'Update Pin'
 });
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from "react-router-dom"
 
 class PinForm extends React.Component {
   constructor(props){
@@ -16,8 +16,9 @@ class PinForm extends React.Component {
   }
 
   handleSubmit() {
+    
     this.props.action(this.state)
-      .then(res => this.props.history.push(`pins/${res.pin.id}`))
+      .then(res => this.props.history.push(`/pins/${res.pin.id}`))
       // .then(res => console.log(res))
   }
 
@@ -54,4 +55,4 @@ class PinForm extends React.Component {
   }
 }
 
-export default PinForm;
+export default withRouter(PinForm);

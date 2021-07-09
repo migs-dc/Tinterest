@@ -27,8 +27,8 @@ const App = () => (
     
     <Switch>
       <Route exact path="/create-pin" component={CreatePinContainer} />
-      <Route exact path="/pins/:pinId/edit" component={EditPinContainer} />
       <Route exact path="/pins/:pinId" component={PinShowContainer} />
+      <Route exact path="/pins/:pinId/edit" component={EditPinContainer} />
       <PinsIndexContainer />
     </Switch>
 

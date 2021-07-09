@@ -13,7 +13,6 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
 );
 
 const mSTP = state => {
-  // debugger
   return { loggedIn: Boolean(state.session.id) };
 };
 
