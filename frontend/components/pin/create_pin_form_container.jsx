@@ -7,8 +7,10 @@ const mSTP = state => ({
   pin: {
     title: '',
     image_url: '',
-    
+    user_id: state.entities.users.userId,
+    description: '',
   },
+  errors: state.errors.session,
   formType: 'Create Pin'
 });
 

@@ -29,7 +29,7 @@ class PinForm extends React.Component {
             onChange={this.update('title')}
           />
         </label>
-
+        <br />
         <label>Image URL:
           <input
             type="text"
@@ -37,7 +37,14 @@ class PinForm extends React.Component {
             onChange={this.update('image_url')}
           />
         </label>
-
+        <br />
+        <label>Description:
+          <textarea
+            value={this.state.description}
+            onChange={this.update('description')}
+          />
+        </label>
+        <br />
         <input type="submit" value={this.props.formType} />
       </form>
     )

@@ -13,8 +13,18 @@ class Api::PinsController < ApplicationController
   end
 
   def create
-    @bench = Pin.create!(pin_params)
-    render :show
+    @pin = Pin.new(pin_params)
+    @pin.user = current_user
+    
+    if @pin.save!
+      # render "api/pins/show"
+      render :show
+    else
+      render json: @pin.errors.full_messages, status: 422
+    end
+
+    # @pin = Pin.create!(pin_params)
+    # render :show
   end
 
   private
