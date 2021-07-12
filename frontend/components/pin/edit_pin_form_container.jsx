@@ -14,10 +14,13 @@ class EditPinForm extends React.Component {
     if (!pin) return null;
     if (!pin.description) pin.description = '';
     return (
-      <PinForm
-        action={action}
-        formType={formType}
-        pin={pin} />
+      <div>
+        <h1>{this.props.formType}</h1>
+        <PinForm
+          action={action}
+          formType={formType}
+          pin={pin} />
+      </div>
     );
   }
 }

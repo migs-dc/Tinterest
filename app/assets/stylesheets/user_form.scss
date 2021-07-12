@@ -22,7 +22,7 @@ ul.errors {
 
   > form {
 
-    width: 425px;  
+    width: 400px;  
     padding: 30px 0 30px 0;
     border: 1px solid rgba(80, 80, 80, 0);
     border-radius: 10px;
@@ -51,15 +51,13 @@ ul.errors {
     }
   
     input {
+      font-size: 15px;
+      width: 200px;
+
       padding: 10px;
+      margin: 5px 0 5px 0;
       border-radius: 12px;
-      border: 1px solid lightgrey;
-    }
-  
-    input:hover {
-      padding: 10px;
-      border-radius: 12px;
-      border: 1px solid rgb(154, 195, 233);
+      border: 2px solid lightgrey;
     }
   
     input.session-submit {
@@ -67,12 +65,11 @@ ul.errors {
       font-weight: bold;
       color: white;
     
-      background: rgba(230, 0, 35, 1); 
-      margin: 10px 0 10px 0;
+      background: rgba(230, 0, 35, 1);
       padding: 10px;
       border-radius: 50px;
       border: 0px solid rgb(231, 228, 228);
-      width: 190px;
+      width: 220px;
     }
 
     a {
@@ -88,7 +85,7 @@ ul.errors {
       padding: 10px;
       border-radius: 50px;
       border: 0px solid rgb(231, 228, 228);
-      width: 190px;
+      width: 220px;
   
       font-size: 15px;
       font-weight: bold;
