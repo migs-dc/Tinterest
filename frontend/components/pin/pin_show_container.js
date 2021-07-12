@@ -6,8 +6,8 @@ import PinShow from './pin_show'
 const mSTP = (state, {match}) => {
   const pinId = parseInt(match.params.pinId);
   const pin = selectPin(state.entities, pinId);
-  // const username = state.entities.users[0].username
-  return { pinId, pin};
+  const currentUser = state.entities.users[state.session.id];
+  return { pinId, pin, currentUser};
 };
 
 const mDTP = dispatch => ({

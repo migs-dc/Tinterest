@@ -11,7 +11,6 @@ class pinShow extends React.Component {
     this.props.fetchPin(this.props.pinId).then(() => {
       this.setState({ loading: false }) 
     });
-    this.props.fetch
   }
 
   render() {
@@ -25,14 +24,20 @@ class pinShow extends React.Component {
           </div>
           <div className="right">
             <div className="top-nav">
-              <Link to={`${this.props.pin.id}/edit`}>
-                <button>Edit Pin</button>
-              </Link>
+              {this.props.pin.user_id === this.props.currentUser.id ?
+                <>
+                <Link to={`${this.props.pin.id}/edit`}>
+                  <button>Edit Pin</button>
+                </Link>
+                </>
+                : ""
+              }
             </div>
             <div className="mid">
               <p>{this.props.pin.title}</p>
               <p>{this.props.pin.description}</p>
               <p>User ID: {this.props.pin.user_id}</p>
+              {/* <p>CU ID: {this.props.currentUser.id}</p> */}
             </div>
             <div className="bot-nav">
               <a href="{this.props.pin.image_url}">image link</a>

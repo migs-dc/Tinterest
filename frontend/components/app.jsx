@@ -9,6 +9,8 @@ import CreatePinContainer from './pin/create_pin_form_container'
 import EditPinContainer from './pin/edit_pin_form_container'
 
 import { AuthRoute } from '../util/route_util';
+import { AuthRoute2 } from '../util/route2_util';
+import { AuthRoute3 } from '../util/route3_util';
 
 const App = () => (
   <div>
@@ -26,9 +28,9 @@ const App = () => (
     </header>
     
     <Switch>
-      <Route exact path="/create-pin" component={CreatePinContainer} />
-      <Route exact path="/pins/:pinId" component={PinShowContainer} />
-      <Route exact path="/pins/:pinId/edit" component={EditPinContainer} />
+      <AuthRoute2 exact path="/create-pin" component={CreatePinContainer} />
+      <AuthRoute2 exact path="/pins/:pinId" component={PinShowContainer} />
+      <AuthRoute3 exact path="/pins/:pinId/edit" component={EditPinContainer} />
       <PinsIndexContainer />
     </Switch>
 
