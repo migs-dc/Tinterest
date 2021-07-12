@@ -13,7 +13,7 @@ class PinsIndexItem extends React.Component {
       <div className="pin">
         { this.props.user ? 
           <>
-          <Link to={`pins/${id}`}>
+          <Link to={`/pins/${id}`}>
             <img className="test" src={window.crow1} />
           </Link>
           </>

@@ -7,7 +7,7 @@ const boardsReducer = (state = {}, action) => {
       return Object.assign({}, action.boards);
 
     case RECEIVE_BOARD:
-      return Object.assign({}, state, {[acton.pin.id]: action.pin});
+      return Object.assign({}, state, {[action.board.id]: action.board});
 
     default:
       return state;

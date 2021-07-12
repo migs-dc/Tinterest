@@ -1,13 +1,17 @@
 import React from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import GreetingContainer from "./greeting/greeting_container";
+
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
+
 import PinsIndexContainer from './pin/pins_index_container';
 import PinShowContainer from './pin/pin_show_container';
 import CreatePinContainer from './pin/create_pin_form_container'
 import EditPinContainer from './pin/edit_pin_form_container'
+
 import BoardsIndexContainer from './board/boards_index_container'
+import BoardShowContainer from './board/board_show_container'
 
 import { AuthRoute } from '../util/route_util';
 import { AuthRoute2 } from '../util/route2_util';
@@ -36,7 +40,10 @@ const App = () => (
       <Route path="/" component={PinsIndexContainer} />
     </Switch>
     
-    <BoardsIndexContainer />
+    <Switch>
+      <AuthRoute2 exact path="/boards/:boardId" component={BoardShowContainer} />
+      <BoardsIndexContainer />
+    </Switch>
 
   </div>
 );

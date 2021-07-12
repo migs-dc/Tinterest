@@ -13,7 +13,7 @@ class BoardsIndexItem extends React.Component {
       <div>
         { this.props.user ? 
           <>
-          <Link to={`boards/${id}`}>
+          <Link to={`/boards/${id}`}>
             <div>
               <h3>Title: {title}</h3>
             </div>

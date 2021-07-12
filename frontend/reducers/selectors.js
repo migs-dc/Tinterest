@@ -2,6 +2,6 @@ export const selectPin = ({ pins }, pinId) => {
   return pins[pinId];
 };
 
-export const selectBoard = ({board}, boardId) => {
+export const selectBoard = ({boards}, boardId) => {
   return boards[boardId];
 }

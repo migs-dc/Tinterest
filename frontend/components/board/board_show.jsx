@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 class boardShow extends React.Component {
-  construct(props) {
+  constructor(props) {
     super(props);
     this.state = { loading: true };
   }
@@ -18,28 +18,24 @@ class boardShow extends React.Component {
       return null;
     } else {
       return(
-        <div className="pin-show">
-          <div className="left">
-            <img className="test" src={window.crow1} />
-          </div>
-          <div className="right">
-            <div className="top-nav">
-              {this.props.pin.user_id === this.props.currentUser.id ?
+        <div>
+          <div>
+            <div>
+              {this.props.board.user_id === this.props.currentUser.id ?
                 <>
-                <Link to={`${this.props.pin.id}/edit`}>
-                  <button>Edit Pin</button>
+                <Link to={`${this.props.board.id}/edit`}>
+                  <button>Edit Board</button>
                 </Link>
                 </>
                 : ""
               }
             </div>
-            <div className="mid">
-              <p>{this.props.pin.title}</p>
-              <p>{this.props.pin.description}</p>
-              <p>User ID: {this.props.pin.user_id}</p>
+            <div>
+              <p>{this.props.board.title}</p>
+              <p>{this.props.currentUser.username}</p>
             </div>
-            <div className="bot-nav">
-              <a href="{this.props.pin.image_url}">image link</a>
+            <div>
+
             </div>   
           </div>
         </div>
@@ -48,4 +44,4 @@ class boardShow extends React.Component {
   }
 }
 
-export default pinShow;
+export default boardShow;
