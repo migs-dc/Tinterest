@@ -11,6 +11,7 @@ class pinShow extends React.Component {
     this.props.fetchPin(this.props.pinId).then(() => {
       this.setState({ loading: false }) 
     });
+    this.props.fetch
   }
 
   render() {

@@ -27,3 +27,11 @@ export const updatePin = pin => (
     data: { pin }
   })
 )
+
+export const fetchUser = id => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/users/${id}`,
+    data: {user}
+  })
+)

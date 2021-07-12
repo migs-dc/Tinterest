@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import { fetchPins } from '../../actions/pin_actions';
 import PinsIndex from './pins_index';
 
-const mSTP = ({entities}) => ({
-  pins: Object.values(entities.pins)
+const mSTP = ({ session, entities}) => ({
+  pins: Object.values(entities.pins),
+  user: entities.users[session.id]
 })
 
 const mDTP = dispatch => ({
