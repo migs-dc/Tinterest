@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
 
+  background: white;
   // width: 100%;
   padding: 0px 20px 0 20px;
   border-bottom: 1px solid lightgray;
@@ -38,10 +39,6 @@ div.login-signup {
     border-radius: 50px;
     border: 0px solid rgb(231, 228, 228);
   }
-
-  button:hover {
-    background: lightgrey;
-  }
   
   a:first-of-type {
     button {
@@ -76,9 +73,7 @@ div.login-signup {
 
   button:hover {
     background: lightgrey;
-    cursor: pointer;
   }
-
 }
 
 button.pb {

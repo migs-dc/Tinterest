@@ -1,6 +1,10 @@
 a{
   text-decoration: none; //underline
   color: black;
+
+  button:hover {
+    background: lightgrey;
+  }
 }
 
 // a:hover {
@@ -12,11 +16,19 @@ a{
 body {
   margin: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: rgb(238, 238, 238);
 }
 
 .logo {
   height: 55px;
 }
 
+button {
+  border: 0px solid rgb(231, 228, 228);
+}
 
+button:hover {
+  background: lightgray;
+  cursor: pointer;
+}
 

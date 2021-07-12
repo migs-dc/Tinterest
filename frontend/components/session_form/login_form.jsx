@@ -69,14 +69,14 @@ class LoginForm extends React.Component {
           {this.renderErrors()}
           
           <div className="login-form">
-            <input type="text"
-              placeholder="Email"
+            <input placeholder="Email"
+              type="text"              
               value={this.state.email}
               onChange={this.update('email')}
             />
             <br />
-            <input type="password"
-              placeholder="Password"
+            <input placeholder="Password"
+              type="password"
               value={this.state.password}
               onChange={this.update('password')}
             />            

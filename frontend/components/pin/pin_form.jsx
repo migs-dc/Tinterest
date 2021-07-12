@@ -36,39 +36,39 @@ class PinForm extends React.Component {
         <div className="inner-form">
           <div className="upload-box">
             <div>
-              <div>
-                Drag and drop 
-                <br />
-                or
-                <br />
-                Click to upload
-              </div>
+              Drag and drop 
+              <br />
+              or
+              <br />
+              Click to upload
             </div>
           </div>
           <div className="info">
             <br />
-            <label>Title:
-              <input
-                type="text"
-                value={this.state.title}
-                onChange={this.update('title')}
-              />
-            </label>
+            <input
+              placeholder="Add your title"
+              type="text"
+              value={this.state.title}
+              onChange={this.update('title')}
+            />
             <br />
-            <label>Image URL:
-              <input
-                type="text"
-                value={this.state.image_url}
-                onChange={this.update('image_url')}
-              />
-            </label>
+            {/* {this.state.user_id}
+            {this.props.username} */}
+            {/* followers */}
             <br />
-            <label>Description:
-              <textarea
-                value={this.state.description}
-                onChange={this.update('description')}
-              />
-            </label>                
+            <input
+              placeholder="Tell everyone what your Pin is about"
+              type="text"
+              value={this.state.description}
+              onChange={this.update('description')}
+            />           
+            <br />
+            <input
+              placeholder="Add a destination link"
+              type="text"
+              value={this.state.image_url}
+              onChange={this.update('image_url')}
+            />
           </div>
         </div>
       </form>

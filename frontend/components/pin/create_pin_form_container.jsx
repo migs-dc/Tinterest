@@ -9,8 +9,9 @@ const mSTP = state => ({
     user_id: state.entities.users.userId,
     description: '',
   },
+  username: state.entities.users.username,
   errors: state.errors.session,
-  formType: 'Create Pin'
+  formType: 'Save'
 });
 
 const mDTP = dispatch => ({

@@ -1,5 +1,6 @@
 .pin-form {
-  border: 1px solid red;
+  // border: 1px solid red;
+  background: white;
 
   width: 850px;
   height: 600px;
@@ -9,19 +10,32 @@
   margin: 40px auto 0 auto;
   
   .top {
-    border: 1px solid pink;
+    // border: 1px solid red;
     margin: 20px 20px 20px 20px; 
     display: flex;
     justify-content: space-between;
 
     > button {
       color: white;
-      font-weight: 500;
+      font-weight: bold;
+      font-size: 15px;
 
       background: rgba(230, 0, 35, 1);
-      padding: 10px;
+      
+      padding: 12px;
       border-radius: 10px;
     }
+    
+    button:first-child {
+      color: black;
+      border: 1px solid lightgray;
+      background: rgb(255, 255, 255);
+    }
+
+    button:hover {
+      background: lightgray;
+    }
+
   }
 
   .inner-form{
@@ -33,12 +47,12 @@
       margin: 0 20px 0 20px;  
       border-radius: 10px;
       height: 450px;
-      width: 80%;
+      width: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
 
-      // border: 1px solid blue;
+      // border: 1px solid red;
       background: rgb(240, 240, 240);
       
       > div {
@@ -54,18 +68,41 @@
         align-items: center;
         text-align: center;
 
-        > div {
-
+        > div { //text
+          font-weight: 100; //gotta make the text thinner I think
         }
       }
     }
   
     .info {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      // border: 1px solid red;
       margin: 0 20px 0 20px;  
-      border: 1px solid green;
       border-radius: 15px;
       height: 500px;
-      width: 100%;
+      width: 60%;
+
+      input {
+        font-size: 16px;
+        width: 400px;
+        padding: 10px;
+        border: 0px solid white;
+        border-bottom: 1px solid gray;
+      }
+      
+      input:first-of-type {
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      input:last-of-type {
+        align-self: flex-end;
+        margin-bottom: 15px;
+      }
     }
   }
 
