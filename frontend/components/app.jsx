@@ -40,12 +40,17 @@ const App = () => (
       <AuthRoute3 exact path="/pins/:pinId/edit" component={EditPinContainer} />
       {/* <AuthRoute2 exact path='/boards' component={BoardsIndexContainer} /> */}
       <Route path="/" component={PinsIndexContainer} />
+
+      {/* <AuthRoute2 exact path="/create-board" component={CreateBoardContainer} />
+      <AuthRoute2 exact path="/boards/:boardId" component={BoardShowContainer} />
+      <AuthRoute3 exact path="/boards/:boardId/edit" component={EditBoardContainer} /> */}
     </Switch>
     
     <Switch>
       <AuthRoute2 exact path="/create-board" component={CreateBoardContainer} />
       <AuthRoute2 exact path="/boards/:boardId" component={BoardShowContainer} />
       <AuthRoute3 exact path="/boards/:boardId/edit" component={EditBoardContainer} />
+      {/* <AuthRoute2 exact path="/create-board" component={CreateBoardContainer} /> */}
       <BoardsIndexContainer />
     </Switch>
 
