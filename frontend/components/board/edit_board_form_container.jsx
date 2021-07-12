@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import BoardForm from './board_form'
-import { fetchBoard, updateBoard } from '../../util/board_api_util'
+import { fetchBoard, updateBoard } from '../../actions/board_actions'
 
 class EditBoardForm extends React.Component {
   componentDidMount() {
