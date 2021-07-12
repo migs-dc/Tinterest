@@ -18,7 +18,12 @@ class PinForm extends React.Component {
 
   resetPage() {
     // window.location.reload(false);
-    this.state = this.props.pin;
+    // this.state = this.props.pin;
+    this.setState({
+      title: this.props.pin.title,
+      description: this.props.pin.description,
+      image_url: this.props.pin.image_url
+    })
   }
 
   handleSubmit() {
