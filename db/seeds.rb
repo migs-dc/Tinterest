@@ -19,20 +19,22 @@ u2 = User.create!(
 )
 
 p1 = Pin.create!(
-  title: 'Pied crow',
+  title: 'Title One',
   user_id: 1,
   image_url: "https://imgur.com/3GChGMb"
 )
 
 p2 = Pin.create!(
-  title: 'American crow',
+  title: 'a long title just to test',
   user_id: 1,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   image_url: "https://imgur.com/CBaJlHS"
 )
 
 p3 = Pin.create!(
-  title: 'three',
+  title: 'a long title just to test asdfasdfasdfasdf',
   user_id: 2,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   image_url: "https://imgur.com/CBaJlHS"
 )
 
@@ -55,4 +57,14 @@ p6 = Pin.create!(
   user_id: 2,
   image_url: "https://imgur.com/CBaJlHS",
   description: "number six description"
+)
+
+b1 = Board.create!(
+  title: 'Board Number One',
+  user_id: 1
+)
+
+b2 = Board.create!(
+  title: 'Board Number two',
+  user_id: 2
 )

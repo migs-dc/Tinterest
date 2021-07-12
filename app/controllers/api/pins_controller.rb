@@ -30,7 +30,7 @@ class Api::PinsController < ApplicationController
     if @pin.update(pin_params)
       render :show
     else
-      render json: @post.errors.full_messages, status: 422
+      render json: @pin.errors.full_messages, status: 422
     end
   end
 

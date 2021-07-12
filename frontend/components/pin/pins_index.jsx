@@ -1,7 +1,7 @@
 import React from 'react'
 import PinsIndexItem from './pins_index_item'
 
-class PinsIndex extends React.Component{
+class PinsIndex extends React.Component {
     constructor(props){
         super(props)
     }

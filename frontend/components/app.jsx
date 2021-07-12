@@ -7,6 +7,7 @@ import PinsIndexContainer from './pin/pins_index_container';
 import PinShowContainer from './pin/pin_show_container';
 import CreatePinContainer from './pin/create_pin_form_container'
 import EditPinContainer from './pin/edit_pin_form_container'
+import BoardsIndexContainer from './board/boards_index_container'
 
 import { AuthRoute } from '../util/route_util';
 import { AuthRoute2 } from '../util/route2_util';
@@ -26,13 +27,16 @@ const App = () => (
       </Link>
       <GreetingContainer />
     </header>
-    
+  
     <Switch>
       <AuthRoute2 exact path="/create-pin" component={CreatePinContainer} />
       <AuthRoute2 exact path="/pins/:pinId" component={PinShowContainer} />
       <AuthRoute3 exact path="/pins/:pinId/edit" component={EditPinContainer} />
-      <PinsIndexContainer />
+      {/* <AuthRoute2 exact path='/boards' component={BoardsIndexContainer} /> */}
+      <Route path="/" component={PinsIndexContainer} />
     </Switch>
+    
+    <BoardsIndexContainer />
 
   </div>
 );
