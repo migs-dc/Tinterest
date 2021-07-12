@@ -19,3 +19,19 @@ export const createBoard = board => (
     data: { board }
   })
 )
+
+export const updateBoard = board => (
+  $.ajax({
+    method: 'PATCH',
+    url: `/api/boards/${board.id}`,
+    data: { board }
+  })
+)
+
+export const fetchUser = id => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/users/${id}`,
+    data: {user}
+  })
+)

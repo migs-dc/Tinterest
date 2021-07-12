@@ -15,9 +15,12 @@ class BoardsIndex extends React.Component {
       <div className="board-index">
         <h1>Boards</h1>
         <br />
-        {this.props.boards.map(board => (
-          <BoardsIndexItem user={this.props.user} board={board} key={board.id} />))
-        }
+        <div>
+          {this.props.boards.map(board => (
+            <BoardsIndexItem user={this.props.user} board={board} key={board.id} />))
+          }
+        </div>
+
       </div>
     )
   }

@@ -18,25 +18,22 @@ class boardShow extends React.Component {
       return null;
     } else {
       return(
-        <div>
+        <div className="board-show">
           <div>
-            <div>
-              {this.props.board.user_id === this.props.currentUser.id ?
-                <>
-                <Link to={`${this.props.board.id}/edit`}>
-                  <button>Edit Board</button>
-                </Link>
-                </>
-                : ""
-              }
-            </div>
-            <div>
-              <p>{this.props.board.title}</p>
-              <p>{this.props.currentUser.username}</p>
-            </div>
-            <div>
-
-            </div>   
+            {this.props.board.user_id === this.props.currentUser.id ?
+              <>
+              <Link to={`${this.props.board.id}/edit`}>
+                <button>Edit Board</button>
+              </Link>
+              </>
+              : ""
+            }
+          </div>
+          <div>
+            <h1>{this.props.board.title}</h1>
+          </div>
+          <div>
+            <p>{this.props.currentUser.username}</p>
           </div>
         </div>
       )

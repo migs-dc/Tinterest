@@ -21,3 +21,6 @@ export const fetchBoard = id => dispatch => APIUtil.fetchBoard(id)
 
 export const createBoard = board => dispatch => APIUtil.createBoard(board)
   .then(board => dispatch(receiveBoard(board)))
+
+export const updateBoard = board => dispatch => APIUtil.updateBoard(board)
+  .then(updatedBoard => dispatch(receiveBoard(updatedBoard))) 

@@ -1,0 +1,35 @@
+.board-index {
+  border: 1px solid red;
+  background: white;
+  width: 900px;
+
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 20px;
+
+  > div {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.board-show {
+  border: 1px solid red;
+  background: white;
+  width: 900px;
+
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 20px;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

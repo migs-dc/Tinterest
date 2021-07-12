@@ -15,7 +15,7 @@ class BoardsIndexItem extends React.Component {
           <>
           <Link to={`/boards/${id}`}>
             <div>
-              <h3>Title: {title}</h3>
+              <p>{title}</p>
             </div>
           </Link>
           </>
@@ -23,7 +23,7 @@ class BoardsIndexItem extends React.Component {
           <>
           <Link to={`/login`}>
             <div>
-              <h3>Title: {title}</h3>
+              <p>{title}</p>
             </div>
           </Link>
           </>
