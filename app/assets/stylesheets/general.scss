@@ -15,7 +15,7 @@ a{
 
 body {
   margin: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Arial;
   background: rgb(238, 238, 238);
 }
 
@@ -27,8 +27,15 @@ button {
   border: 0px solid rgb(231, 228, 228);
 }
 
+input {
+
+}
+
 button:hover {
   background: lightgray;
   cursor: pointer;
 }
 
+h1 {
+  text-align: center;
+}

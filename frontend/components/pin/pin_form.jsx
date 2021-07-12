@@ -15,6 +15,10 @@ class PinForm extends React.Component {
     }
   }
 
+  refreshPage() {
+    window.location.reload(false);
+  }
+
   handleSubmit() {
     
     this.props.action(this.state)
@@ -24,14 +28,15 @@ class PinForm extends React.Component {
 
   render() {
     return  (
+      <div>
       <form onSubmit={this.handleSubmit} className="pin-form">
         <input type="hidden" 
           name="authenticity_token" 
           value="<%= form_authenticity_token %>"/>
 
         <div className="top">
-          <button type="button">Delete</button>
-          <button>{this.props.formType}</button>
+          <button type="button" onClick={this.refreshPage}>Reset</button>
+          <button>Save</button>
         </div>
         <div className="inner-form">
           <div className="upload-box">
@@ -45,8 +50,7 @@ class PinForm extends React.Component {
           </div>
           <div className="info">
             <br />
-            <input
-              placeholder="Add your title"
+            <input placeholder="Add your title"
               type="text"
               value={this.state.title}
               onChange={this.update('title')}
@@ -56,15 +60,13 @@ class PinForm extends React.Component {
             {this.props.username} */}
             {/* followers */}
             <br />
-            <input
-              placeholder="Tell everyone what your Pin is about"
+            <textarea placeholder="Tell everyone what your Pin is about"
               type="text"
               value={this.state.description}
               onChange={this.update('description')}
             />           
             <br />
-            <input
-              placeholder="Add a destination link"
+            <input placeholder="Add a destination link"
               type="text"
               value={this.state.image_url}
               onChange={this.update('image_url')}
@@ -72,6 +74,7 @@ class PinForm extends React.Component {
           </div>
         </div>
       </form>
+      </div>
     )
   }
 }

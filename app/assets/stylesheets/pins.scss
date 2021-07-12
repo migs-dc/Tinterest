@@ -17,5 +17,60 @@
 }
 
 .pin-show {
-  background: grey
+  display: flex;
+  background: white;
+
+  width: 850px;
+  height: 600px;
+
+  border-radius: 15px;
+  margin: 40px auto 0 auto;
+
+  .left {
+    // border: 1px solid red;
+    // margin: 0 20px 0 0;
+
+    img {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      margin: 0;
+      height: 100%;
+      width: 424px;
+    }
+  }
+
+  .right {
+    // border: 1px solid red;
+    padding: 10px;
+
+    .top-nav {
+      margin: 10px 0;
+      border: 0px solid grey;
+      padding: 0 5px;
+
+      button {
+        font-size: 15px;
+        font-weight: bold;
+        color: black;
+    
+        padding: 10px;
+        border-radius: 50px;
+      }
+    }
+
+    .mid {
+      height: 500px;
+      p {
+        margin: 7px 0 0 0;
+      }
+      p:first-of-type {
+        font-size: 36px;
+      }
+    }
+
+    // .bot-nav {
+
+    // }
+  }
+  
 }

@@ -19,12 +19,24 @@ class pinShow extends React.Component {
     } else {
       return(
         <div className="pin-show">
-          <h2>User ID: {this.props.pin.user_id}</h2>
-          <p>Title: {this.props.pin.title}</p>
-          <p>Description: {this.props.pin.description}</p>
-          <p>Image URL: {this.props.pin.image_url}</p>
-          <img className="test" src={window.crow1} />
-          <Link to={`${this.props.pin.id}/edit`}>Edit Pin</Link>
+          <div className="left">
+            <img className="test" src={window.crow1} />
+          </div>
+          <div className="right">
+            <div className="top-nav">
+              <Link to={`${this.props.pin.id}/edit`}>
+                <button>Edit Pin</button>
+              </Link>
+            </div>
+            <div className="mid">
+              <p>{this.props.pin.title}</p>
+              <p>{this.props.pin.description}</p>
+              <p>User ID: {this.props.pin.user_id}</p>
+            </div>
+            <div className="bot-nav">
+              <a href="{this.props.pin.image_url}">image link</a>
+            </div>   
+          </div>
           {/* <Link to={`pins/${this.props.pin.id}/edit`}>Edit Pin</Link> */}
         </div>
       )

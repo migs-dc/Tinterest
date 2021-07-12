@@ -11,7 +11,7 @@ const mSTP = state => ({
   },
   username: state.entities.users.username,
   errors: state.errors.session,
-  formType: 'Save'
+  formType: 'Create Pin'
 });
 
 const mDTP = dispatch => ({
