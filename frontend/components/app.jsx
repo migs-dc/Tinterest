@@ -12,6 +12,7 @@ import EditPinContainer from './pin/edit_pin_form_container'
 
 import BoardsIndexContainer from './board/boards_index_container'
 import BoardShowContainer from './board/board_show_container'
+import CreateBoardContainer from './board/create_board_form_container'
 
 import { AuthRoute } from '../util/route_util';
 import { AuthRoute2 } from '../util/route2_util';
@@ -41,6 +42,7 @@ const App = () => (
     </Switch>
     
     <Switch>
+      <AuthRoute2 exact path="/create-board" component={CreateBoardContainer} />
       <AuthRoute2 exact path="/boards/:boardId" component={BoardShowContainer} />
       <BoardsIndexContainer />
     </Switch>

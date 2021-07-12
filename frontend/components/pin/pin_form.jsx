@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from "react-router-dom"
 
 class PinForm extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = this.props.pin;

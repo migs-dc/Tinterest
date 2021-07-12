@@ -13,7 +13,7 @@ const Greeting = ({ currentUser, logout }) => {
     <hgroup className="header-group">
       <h3 className="header-name">{currentUser.username}</h3>
       <Link to='/create-pin'><button className="pb">Create Pin</button></Link>
-      <Link to='/boards-index'><button className="pb">Boards</button></Link>
+      <Link to='/create-board'><button className="pb">Create Board</button></Link>
       <Link to='/'>
         <button className="header-button" onClick={logout}>Log out</button>
       </Link>
