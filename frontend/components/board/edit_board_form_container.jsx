@@ -14,7 +14,6 @@ class EditBoardForm extends React.Component {
     if (!board) return null;
     return (
       <div>
-        <h1>{this.props.formType}</h1>
         <BoardForm
           action={action}
           formType={formType}
