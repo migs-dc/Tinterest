@@ -2,6 +2,10 @@ import React from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import GreetingContainer from "./greeting/greeting_container";
 
+import { AuthRoute } from '../util/route_util';
+import { AuthRoute2 } from '../util/route2_util';
+import { AuthRoute3 } from '../util/route3_util';
+
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 
@@ -15,15 +19,12 @@ import BoardShowContainer from './board/board_show_container'
 import CreateBoardContainer from './board/create_board_form_container'
 import EditBoardContainer from './board/edit_board_form_container'
 
-import { AuthRoute } from '../util/route_util';
-import { AuthRoute2 } from '../util/route2_util';
-import { AuthRoute3 } from '../util/route3_util';
-
 const App = () => (
   <div>
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <AuthRoute2 exact path="/create-board" component={CreateBoardContainer} />
     </Switch>    
 
     <header className="top-nav">
@@ -35,15 +36,15 @@ const App = () => (
     </header>
   
     <Switch>
+      {/* <Route exact path="/" component={PinsIndexContainer} /> */}
       <AuthRoute2 exact path="/create-pin" component={CreatePinContainer} />
       <AuthRoute2 exact path="/pins/:pinId" component={PinShowContainer} />
       <AuthRoute3 exact path="/pins/:pinId/edit" component={EditPinContainer} />
-      <Route exact path="/" component={PinsIndexContainer} />
 
-      <AuthRoute2 exact path='/boards' component={BoardsIndexContainer} />
-      <AuthRoute2 exact path="/create-board" component={CreateBoardContainer} />
+      <AuthRoute2 exact path='/boards' component={BoardsIndexContainer} />      
       <AuthRoute2 exact path="/boards/:boardId" component={BoardShowContainer} />
       <AuthRoute3 exact path="/boards/:boardId/edit" component={EditBoardContainer} />
+      <PinsIndexContainer />
     </Switch>
   </div>
 );

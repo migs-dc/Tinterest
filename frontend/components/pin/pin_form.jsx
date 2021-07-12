@@ -7,6 +7,7 @@ class PinForm extends React.Component {
 
     this.state = this.props.pin;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.resetPage = this.resetPage.bind(this);
   }
 
   update(field) {
@@ -15,8 +16,9 @@ class PinForm extends React.Component {
     }
   }
 
-  refreshPage() {
-    window.location.reload(false);
+  resetPage() {
+    // window.location.reload(false);
+    this.state = this.props.pin;
   }
 
   handleSubmit() {
@@ -35,7 +37,7 @@ class PinForm extends React.Component {
           value="<%= form_authenticity_token %>"/>
 
         <div className="top">
-          <button type="button" onClick={this.refreshPage}>Reset</button>
+          <button type="button" onClick={this.resetPage}>Reset</button>
           <button>Save</button>
         </div>
         <div className="inner-form">

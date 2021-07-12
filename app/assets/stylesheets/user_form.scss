@@ -28,21 +28,6 @@ ul.errors {
     border-radius: 10px;
     background: white;
     color: grey;  
-    
-    .close-button {
-      text-align: right;
-      margin: 0 20px;
-      right: 30%;
-
-      > a {
-        padding: 5px 10px;
-        border-radius: 20px;
-      }
-
-      > a:hover {
-        background: lightgrey;
-      }
-    }
   
     p {
       font-size: 36px;

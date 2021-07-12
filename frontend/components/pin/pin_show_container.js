@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import { fetchPin } from '../../actions/pin_actions'
+import { fetchUser } from '../../actions/session_actions'
 import { selectPin } from '../../reducers/selectors'
 import PinShow from './pin_show'
 
@@ -11,7 +12,8 @@ const mSTP = (state, {match}) => {
 };
 
 const mDTP = dispatch => ({
-  fetchPin: id => dispatch(fetchPin(id))
+  fetchPin: id => dispatch(fetchPin(id)),
+  fetchUser: id => dispatch(fetchUser(id))
 });
 
 export default connect(mSTP, mDTP)(PinShow);

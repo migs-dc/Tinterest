@@ -8,13 +8,16 @@ class pinShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchPin(this.props.pinId).then(() => {
-      this.setState({ loading: false }) 
-    });
+    this.props.fetchPin(this.props.pinId).then(()=> {
+      this.props.fetchUser(this.props.pin.user_id).then(res => {
+        // console.log(res.user.username)
+        this.setState({ username: res.user.username, loading: false })
+      })
+    })
   }
 
   render() {
-    if (this.state.loading){
+    if (this.state.loading && this.props.pin === undefined ){
       return null;
     } else {
       return(
@@ -36,14 +39,16 @@ class pinShow extends React.Component {
             <div className="mid">
               <p>{this.props.pin.title}</p>
               <p>{this.props.pin.description}</p>
-              <p>{this.props.currentUser.username}</p>
-              {/* <p>CU ID: {this.props.currentUser.id}</p> */}
+              {console.log(this.state)}
+              <div className="author">
+                {this.state.username} 
+                {/* <p>CU ID: {this.props.currentUser.id}</p> */}
+              </div>
             </div>
             <div className="bot-nav">
               <a href="{this.props.pin.image_url}">image link</a>
             </div>   
           </div>
-          {/* <Link to={`pins/${this.props.pin.id}/edit`}>Edit Pin</Link> */}
         </div>
       )
     }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter } from "react-router-dom"
+import { withRouter, Link } from "react-router-dom"
 
 class BoardForm extends React.Component {
   constructor(props) {
@@ -26,22 +26,27 @@ class BoardForm extends React.Component {
 
   render() {
     return (
-      <div className="create-board">
-        <h1>{this.props.formType}</h1>
-        <form onSubmit={this.handleSubmit}>
-          <input type="hidden" 
-            name="authenticity_token" 
-            value="<%= form_authenticity_token %>"/>
-          
-          <input placeholder="Board Title"
-            type="text"
-            value={this.state.title}
-            onChange={this.update('title')}
-          />
-         
-          <br />
-          <button>{this.props.formType}</button>
-        </form>
+      <div className="background">
+        <div className="create-board">
+          <div className="close-button">
+            <Link to="/">X</Link>
+          </div>
+
+          <h1>{this.props.formType}</h1>
+          <form onSubmit={this.handleSubmit}>
+            <input type="hidden" 
+              name="authenticity_token" 
+              value="<%= form_authenticity_token %>"/>
+            <input placeholder="Board Title"
+              type="text"
+              value={this.state.title}
+              onChange={this.update('title')}
+            />
+
+            <br />
+            <button>{this.props.formType}</button>
+          </form>
+        </div>
       </div>
     )
   }

@@ -9,7 +9,7 @@ const mSTP = state => ({
   },
   username: state.entities.users.username,
   errors: state.errors.session,
-  formType: 'Create Board'
+  formType: 'Create board'
 });
 
 const mDTP = dispatch => ({

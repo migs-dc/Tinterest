@@ -27,11 +27,3 @@ export const updateBoard = board => (
     data: { board }
   })
 )
-
-export const fetchUser = id => (
-  $.ajax({
-    method: 'GET',
-    url: `/api/users/${id}`,
-    data: {user}
-  })
-)

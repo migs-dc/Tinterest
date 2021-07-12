@@ -41,6 +41,7 @@
 
   .right {
     // border: 1px solid red;
+    width: 406px;
     padding: 10px;
 
     .top-nav {
@@ -59,12 +60,23 @@
     }
 
     .mid {
+      width: auto;
       height: 500px;
       p {
         margin: 7px 0 0 0;
       }
       p:first-of-type {
         font-size: 36px;
+      }
+
+      .author {
+        border-top: 1px solid lightgray;
+        // border-radius: 15px;
+        padding: 10px;
+        margin: 10px auto;
+        width: 300px;
+
+        text-align: center;
       }
     }
 

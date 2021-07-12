@@ -24,3 +24,4 @@ export const createPin = pin => dispatch => APIUtil.createPin(pin)
 
 export const updatePin = pin => dispatch => APIUtil.updatePin(pin)
   .then(updatedPin => dispatch(receivePin(updatedPin)))
+

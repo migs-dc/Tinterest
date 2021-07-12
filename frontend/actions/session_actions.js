@@ -3,6 +3,7 @@ import * as SessionAPIUtil from '../util/session_api_util';
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
+export const RECEIVE_USER = 'RECEIVE_USER';
 
 export const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -17,6 +18,11 @@ export const receiveErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
   errors
 });
+
+export const receiveUser = user => ({
+  type: RECEIVE_USER,
+  user
+})
 
 export const signup = user => dispatch => (
   SessionAPIUtil.signup(user).then(
@@ -47,3 +53,7 @@ export const logout = () => dispatch => (
 );
 
 export const clearErrors = () => dispatch => dispatch(receiveErrors([]))
+
+// get user for pins and boards show pages
+export const fetchUser = id => dispatch => SessionAPIUtil.fetchUser(id)
+  .then(user => dispatch(receiveUser(user)))
