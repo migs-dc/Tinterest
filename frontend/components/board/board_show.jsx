@@ -33,7 +33,8 @@ class boardShow extends React.Component {
             <h1>{this.props.board.title}</h1>
           </div>
           <div>
-            <p>{this.props.currentUser.username}</p>
+            {console.log(this.props.board)}
+            <p>{this.props.board.username}</p>
           </div>
         </div>
       )

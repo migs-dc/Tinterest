@@ -10,7 +10,6 @@ class pinShow extends React.Component {
   componentDidMount() {
     this.props.fetchPin(this.props.pinId).then(()=> {
       this.props.fetchUser(this.props.pin.user_id).then(res => {
-        // console.log(res.user.username)
         this.setState({ username: res.user.username, loading: false })
       })
     })
@@ -23,7 +22,8 @@ class pinShow extends React.Component {
       return(
         <div className="pin-show">
           <div className="left">
-            <img className="test" src={window.crow1} />
+            <img className="test" src={this.props.pin.image_url} />
+            {/* <img className="test" src={window.crow1} /> */}
           </div>
           <div className="right">
             <div className="top-nav">
@@ -39,7 +39,6 @@ class pinShow extends React.Component {
             <div className="mid">
               <p>{this.props.pin.title}</p>
               <p>{this.props.pin.description}</p>
-              {console.log(this.state)}
               <div className="author">
                 {this.state.username} 
                 {/* <p>CU ID: {this.props.currentUser.id}</p> */}
