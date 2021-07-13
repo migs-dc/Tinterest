@@ -16,8 +16,7 @@ class Api::PinsController < ApplicationController
     @pin = Pin.new(pin_params)
     @pin.user = current_user
     
-    if @pin.save!
-      # render "api/pins/show"
+    if @pin.save
       render :show
     else
       render json: @pin.errors.full_messages, status: 422

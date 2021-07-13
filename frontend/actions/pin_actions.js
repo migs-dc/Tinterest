@@ -37,10 +37,12 @@ export const fetchPin = id => dispatch => APIUtil.fetchPin(id)
 //   )
 
 export const createPin = pin => dispatch => {
-  debugger
   return APIUtil.createPin(pin).then(
-    error => dispatch(receiveErrors(error.responseJSON)),
-    pin => dispatch(receivePin(pin))
+    pin => dispatch(receivePin(pin)),
+    error => {
+      // debugger
+      return dispatch(receiveErrors(error.responseJSON))
+    }
   )
 }
 

@@ -17,7 +17,6 @@ class PinForm extends React.Component {
   }
 
   delete(id) {
-    console.log(id)
     this.props.deletePin(id)
   }
 
@@ -30,7 +29,6 @@ class PinForm extends React.Component {
   }
 
   renderErrors() {
-    console.log(this.props.errors)
     return(
       <ul className="errors">
         {this.props.errors.map((error, i) => (
@@ -59,6 +57,7 @@ class PinForm extends React.Component {
 
         <div className="top">
           <button type="button" onClick={this.resetPage}>Reset</button>
+          {this.renderErrors()}   
           <button>Save</button>
         </div>
         <div className="inner-form">
@@ -78,7 +77,7 @@ class PinForm extends React.Component {
               value={this.state.title}
               onChange={this.update('title')}
             />
-            {this.renderErrors()}
+            
             <br /><br />
             <textarea placeholder="Tell everyone what your Pin is about"
               type="text"

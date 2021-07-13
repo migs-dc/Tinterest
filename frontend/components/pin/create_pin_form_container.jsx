@@ -3,7 +3,8 @@ import PinForm from './pin_form';
 import { createPin, clearErrors } from '../../actions/pin_actions'
 
 const mSTP = state => ({
-  errors: state.errors.session,
+  errors: state.errors.pin,
+  // state: state,
   pin: {
     title: '',
     image_url: '',
@@ -11,7 +12,6 @@ const mSTP = state => ({
     description: '',
   },
   username: state.entities.users.username,
-  errors: state.errors.session,
   formType: 'Create Pin'
 });
 
