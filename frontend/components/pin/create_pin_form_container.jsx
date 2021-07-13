@@ -4,7 +4,6 @@ import { createPin, clearErrors } from '../../actions/pin_actions'
 
 const mSTP = state => ({
   errors: state.errors.pin,
-  // state: state,
   pin: {
     title: '',
     image_url: '',

@@ -3,9 +3,8 @@ import EditPinForm from './edit_pin_form';
 import { fetchPin, updatePin, deletePin, clearErors } from '../../actions/pin_actions'
 
 const mSTP = (state, ownProps) => ({
-  errors: state.errors.session,
+  errors: state.errors.pin,
   pin: state.entities.pins[ownProps.match.params.pinId],
-  errors: state.errors.session,
   formType: 'Update Pin'
 });
 
