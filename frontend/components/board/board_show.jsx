@@ -22,25 +22,29 @@ class boardShow extends React.Component {
       return(
         <div className="board-show">
           <div>
-            {board.user_id === this.props.currentUser.id ?
-              <>
-              <Link to={`${board.id}/edit`}>
-                <button>Edit Board</button>
-              </Link>
-              </>
-              : ""
-            }
-          </div>
-          <div>
+            {console.log(board.title)}
             <h1>{board.title}</h1>
           </div>
           <div>
             <p>{board.username}</p>
           </div>
           <div>
-            {board.pins.map(pin => (
-              <PinsIndexItem pin={pin} key={pin.id} />
-            ))}
+            {board.user_id === this.props.currentUser.id ?
+              <>
+              <Link to={`${board.id}/edit`}>
+                <button>Edit/Delete</button>
+              </Link>
+              </>
+              : ""
+            }
+          </div>
+          <div>
+            {(board.pins !== undefined) ?
+              board.pins.map(pin => (
+                <PinsIndexItem pin={pin} key={pin.id} />
+              ))
+              : <p>Board is empty</p>
+            }
           </div>
         </div>
       )

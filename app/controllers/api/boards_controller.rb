@@ -15,7 +15,7 @@ class Api::BoardsController < ApplicationController
     @board = Board.new(board_params)
     @board.user = current_user
 
-    if @board.save!
+    if @board.save
       render :show
     else
       render json: @board.errors.full_messages, status: 422
@@ -30,6 +30,17 @@ class Api::BoardsController < ApplicationController
     else
       render json: @board.errors.full_messages, status: 422
     end
+  end
+
+  def destroy
+    @board = Board.find(params[:id])
+
+    if @board.destroy
+      render :index
+    else
+      render json: @board.errors.full_messages, status: 422
+    end
+
   end
 
   private

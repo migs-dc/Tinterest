@@ -27,3 +27,10 @@ export const updateBoard = board => (
     data: { board }
   })
 )
+
+export const deleteBoard = id => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/boards/${id}`
+  })
+)

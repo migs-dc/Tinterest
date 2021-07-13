@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import EditPinForm from './edit_pin_form';
-import { fetchPin, updatePin, deletePin, clearErors } from '../../actions/pin_actions'
+import { fetchPin, updatePin, deletePin, clearErrors } from '../../actions/pin_actions'
 
 const mSTP = (state, ownProps) => ({
   errors: state.errors.pin,

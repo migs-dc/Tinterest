@@ -14,3 +14,4 @@ json.pins do
     json.extract! pin, :id, :title, :user_id, :description, :image_url
   end
 end
+

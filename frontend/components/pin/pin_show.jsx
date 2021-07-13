@@ -30,7 +30,7 @@ class pinShow extends React.Component {
               {this.props.pin.user_id === this.props.currentUser.id ?
                 <>
                 <Link to={`${this.props.pin.id}/edit`}>
-                  <button>Edit Pin</button>
+                  <button>Edit/Delete</button>
                 </Link>
                 </>
                 : ""

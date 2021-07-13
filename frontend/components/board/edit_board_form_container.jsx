@@ -1,36 +1,17 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import BoardForm from './board_form'
-import { fetchBoard, updateBoard } from '../../actions/board_actions'
-
-class EditBoardForm extends React.Component {
-  componentDidMount() {
-    this.props.fetchBoard(this.props.match.params.boardId);
-  }
-
-  render() {
-    const { action, formType, board } = this.props
-
-    if (!board) return null;
-    return (
-      <div>
-        <BoardForm
-          action={action}
-          formType={formType}
-          board={board} />
-      </div>
-    );
-  }
-}
+import { connect } from 'react-redux';
+import EditBoardForm from './edit_board_form';
+import { fetchBoard, updateBoard, deleteBoard, clearErrors } from '../../actions/board_actions'
 
 const mSTP = (state, ownProps) => ({
   board: state.entities.boards[ownProps.match.params.boardId],
-  errors: state.errors.session,
+  errors: state.errors.board,
   formType: 'Update Board'
 });
 
 const mDTP = dispatch => ({
   fetchBoard: boardId => dispatch(fetchBoard(boardId)),
+  deleteBoard: boardId => dispatch(deleteBoard(boardId)),
+  clearErrors: () => dispatch(clearErrors()),
   action: board => dispatch(updateBoard(board))
 })
 

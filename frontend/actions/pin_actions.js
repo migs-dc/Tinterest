@@ -46,7 +46,6 @@ export const createPin = pin => dispatch => {
   )
 }
 
-
 export const updatePin = pin => dispatch => APIUtil.updatePin(pin)
   .then(updatedPin => (dispatch(receivePin(updatedPin))),
     error => (dispatch(receiveErrors(error.responseJSON)))
