@@ -24,7 +24,6 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <AuthRoute2 exact path="/create-board" component={CreateBoardContainer} />
     </Switch>    
 
     <header className="top-nav">
@@ -36,15 +35,17 @@ const App = () => (
     </header>
   
     <Switch>
-      {/* <Route exact path="/" component={PinsIndexContainer} /> */}
+      <Route exact path="/" component={PinsIndexContainer} />
       <AuthRoute2 exact path="/create-pin" component={CreatePinContainer} />
       <AuthRoute2 exact path="/pins/:pinId" component={PinShowContainer} />
       <AuthRoute3 exact path="/pins/:pinId/edit" component={EditPinContainer} />
-
+      
+      <AuthRoute2 exact path="/create-board" component={CreateBoardContainer} />
       <AuthRoute2 exact path='/boards' component={BoardsIndexContainer} />      
       <AuthRoute2 exact path="/boards/:boardId" component={BoardShowContainer} />
       <AuthRoute3 exact path="/boards/:boardId/edit" component={EditBoardContainer} />
-      <PinsIndexContainer />
+      
+      {/* <PinsIndexContainer /> */}
     </Switch>
   </div>
 );

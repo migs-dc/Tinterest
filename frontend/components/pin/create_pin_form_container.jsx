@@ -1,8 +1,9 @@
 import { connect } from "react-redux";
 import PinForm from './pin_form';
-import { createPin } from '../../actions/pin_actions'
+import { createPin, clearErrors } from '../../actions/pin_actions'
 
 const mSTP = state => ({
+  errors: state.errors.session,
   pin: {
     title: '',
     image_url: '',
@@ -15,7 +16,8 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-  action: pin => dispatch(createPin(pin))
+  action: pin => dispatch(createPin(pin)),
+  clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(mSTP, mDTP)(PinForm);

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { fetchPin } from '../../actions/pin_actions'
+import { fetchPin, deletePin } from '../../actions/pin_actions'
 import { fetchUser } from '../../actions/session_actions'
 import { selectPin } from '../../reducers/selectors'
 import PinShow from './pin_show'

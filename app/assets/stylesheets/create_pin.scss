@@ -115,3 +115,23 @@
   }
 
 }
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.delete-button {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 10px; 
+  padding: 12px;
+  
+  width: 10%;
+  margin: 0 auto;
+}

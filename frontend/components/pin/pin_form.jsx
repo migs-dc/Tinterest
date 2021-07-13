@@ -16,21 +16,37 @@ class PinForm extends React.Component {
     }
   }
 
+  delete(id) {
+    console.log(id)
+    this.props.deletePin(id)
+  }
+
   resetPage() {
-    // window.location.reload(false);
-    // this.state = this.props.pin;
     this.setState({
-      title: this.props.pin.title,
-      description: this.props.pin.description,
-      image_url: this.props.pin.image_url
+      title: pin.title,
+      description: pin.description,
+      image_url: pin.image_url
     })
   }
 
-  handleSubmit() {
-    
+  renderErrors() {
+    console.log(this.props.errors)
+    return(
+      <ul className="errors">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();    
     this.props.action(this.state)
       .then(res => this.props.history.push(`/pins/${res.pin.id}`))
-      // .then(res => console.log(res))
+    // this.props.history.push(`/pins/${res.pin.id}`);
   }
 
   render() {
@@ -62,11 +78,8 @@ class PinForm extends React.Component {
               value={this.state.title}
               onChange={this.update('title')}
             />
-            <br />
-            {/* {this.state.user_id}
-            {this.props.username} */}
-            {/* followers */}
-            <br />
+            {this.renderErrors()}
+            <br /><br />
             <textarea placeholder="Tell everyone what your Pin is about"
               type="text"
               value={this.state.description}

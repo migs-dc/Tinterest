@@ -1,5 +1,5 @@
 class Api::PinsController < ApplicationController
-  before_action :require_logged_in, only: [:create, :edit, :update]
+  before_action :require_logged_in, only: [:create, :edit, :update, :destroy]
 
   def index
     @pins = Pin.all 
@@ -29,6 +29,16 @@ class Api::PinsController < ApplicationController
 
     if @pin.update(pin_params)
       render :show
+    else
+      render json: @pin.errors.full_messages, status: 422
+    end
+  end
+
+  def destroy 
+    @pin = Pin.find(params[:id])
+
+    if @pin.destroy!
+      :index
     else
       render json: @pin.errors.full_messages, status: 422
     end

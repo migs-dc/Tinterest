@@ -45,7 +45,7 @@ class pinShow extends React.Component {
               </div>
             </div>
             <div className="bot-nav">
-              <a href="{this.props.pin.image_url}">image link</a>
+              <a href={this.props.pin.image_url}>image link</a>
             </div>   
           </div>
         </div>
