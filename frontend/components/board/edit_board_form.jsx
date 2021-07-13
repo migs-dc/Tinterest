@@ -5,7 +5,7 @@ class EditBoardForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = this.props.baord;
+    this.state = this.props.board;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   
@@ -40,21 +40,22 @@ class EditBoardForm extends React.Component {
           <div className="close-button">
             <Link to="/">X</Link>
           </div>
-
-          <h1>{formType}</h1>
-          <button 
-            type="button" 
-            className="delete-button"
-            onClick={() => this.delete(board.id)}>
-            Delete Board
-          </button>
           <form onSubmit={this.handleSubmit}>
             <input type="hidden" 
               name="authenticity_token" 
               value="<%= form_authenticity_token %>"/>
+            <h1>{formType}</h1>
+
+            <button 
+              type="button" 
+              className="edit-delete-button"
+              onClick={() => this.delete(board.id)}>
+              Delete Board
+            </button>
+
             <input placeholder="Board Title"
               type="text"
-              value={board.title}
+              value={this.state.title}
               onChange={this.update('title')}
             />
             <br />
