@@ -8,7 +8,7 @@ const mSTP = (state, {match}) => {
   const pinId = parseInt(match.params.pinId);
   const pin = selectPin(state.entities, pinId);
   const currentUser = state.entities.users[state.session.id];
-  return { pinId, pin, currentUser};
+  return { pinId, pin, currentUser };
 };
 
 const mDTP = dispatch => ({

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PinsIndexItem from '../pin/pins_index_item'
 
 class boardShow extends React.Component {
   constructor(props) {
@@ -14,15 +15,16 @@ class boardShow extends React.Component {
   }
 
   render() {
+    const board = this.props.board;
     if (this.state.loading){
       return null;
     } else {
       return(
         <div className="board-show">
           <div>
-            {this.props.board.user_id === this.props.currentUser.id ?
+            {board.user_id === this.props.currentUser.id ?
               <>
-              <Link to={`${this.props.board.id}/edit`}>
+              <Link to={`${board.id}/edit`}>
                 <button>Edit Board</button>
               </Link>
               </>
@@ -30,11 +32,15 @@ class boardShow extends React.Component {
             }
           </div>
           <div>
-            <h1>{this.props.board.title}</h1>
+            <h1>{board.title}</h1>
           </div>
           <div>
-            {console.log(this.props.board)}
-            <p>{this.props.board.username}</p>
+            <p>{board.username}</p>
+          </div>
+          <div>
+            {board.pins.map(pin => (
+              <PinsIndexItem pin={pin} key={pin.id} />
+            ))}
           </div>
         </div>
       )
