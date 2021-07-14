@@ -15,7 +15,7 @@ const Greeting = ({ currentUser, logout }) => {
       <Link to='/create-pin'><button className="pb">Create Pin</button></Link>
       <Link to='/create-board'><button className="pb">Create Board</button></Link>
       <Link to='/boards'><button className="pb">Boards</button></Link>
-      <Link to='/'>
+      <Link to='/pins'>
         <button className="header-button" onClick={logout}>Log out</button>
       </Link>
     </hgroup>

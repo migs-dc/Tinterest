@@ -39,7 +39,6 @@ const App = () => (
       <AuthRoute2 exact path="/create-pin" component={CreatePinContainer} />
       <AuthRoute2 exact path="/pins/:pinId" component={PinShowContainer} />
       <AuthRoute3 exact path="/pins/:pinId/edit" component={EditPinContainer} />
-      {/* <PinsIndexContainer /> */}
     {/* </Switch>
     <Switch> */}
       <AuthRoute2 exact path='/boards' component={BoardsIndexContainer} />      
@@ -47,6 +46,7 @@ const App = () => (
       <AuthRoute2 exact path="/boards/:boardId" component={BoardShowContainer} />
       <AuthRoute3 exact path="/boards/:boardId/edit" component={EditBoardContainer} />
       
+      <PinsIndexContainer />
       
     </Switch>
   </div>

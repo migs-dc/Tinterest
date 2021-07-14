@@ -8,6 +8,14 @@ class EditBoardForm extends React.Component {
     this.state = this.props.board;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  componentDidMount(){
+    this.props.fetchBoard(this.props.match.params.boardId)
+  }
+
+  componentWillUnmount(){
+    this.props.clearErrors()
+  }
   
   update(field) {
     return e => {
@@ -15,18 +23,27 @@ class EditBoardForm extends React.Component {
     }
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     this.props.action(this.state)
       .then(() => this.props.history.push(`/boards/`))
-  }
-
-  componentDidMount(){
-    this.props.fetchBoard(this.props.match.params.boardId)
   }
 
   delete(id){
     this.props.deleteBoard(id)
       .then(() => this.props.history.push('/boards'))
+  }
+
+  renderErrors() {
+    return(
+      <ul className="errors">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -44,7 +61,9 @@ class EditBoardForm extends React.Component {
             <input type="hidden" 
               name="authenticity_token" 
               value="<%= form_authenticity_token %>"/>
+
             <h1>{formType}</h1>
+            {this.renderErrors()}
 
             <button type="button" 
                     className="edit-delete-button"

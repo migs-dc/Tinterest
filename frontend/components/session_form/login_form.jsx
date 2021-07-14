@@ -12,6 +12,10 @@ class LoginForm extends React.Component {
     this.loginDemoUser = this.loginDemoUser.bind(this);
   }
 
+  componentWillUnmount(){
+    this.props.clearErrors()
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -41,10 +45,6 @@ class LoginForm extends React.Component {
         ))}
       </ul>
     );
-  }
-
-  componentWillUnmount(){
-    this.props.clearErrors()
   }
 
   render() {

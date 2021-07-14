@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import BoardForm from './board_form';
-import { createBoard } from '../../actions/board_actions'
+import { createBoard, clearErrors } from '../../actions/board_actions'
 
 const mSTP = state => ({
   board: {
@@ -8,12 +8,13 @@ const mSTP = state => ({
     user_id: state.entities.users.userId
   },
   username: state.entities.users.username,
-  errors: state.errors.session,
+  errors: state.errors.board,
   formType: 'Create Board'
 });
 
 const mDTP = dispatch => ({
-  action: board => dispatch(createBoard(board))
+  action: board => dispatch(createBoard(board)),
+  clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(mSTP, mDTP)(BoardForm);

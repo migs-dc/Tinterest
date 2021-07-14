@@ -10,6 +10,10 @@ class PinForm extends React.Component {
     this.resetPage = this.resetPage.bind(this);
   }
 
+  componentWillUnmount(){
+    this.props.clearErrors()
+  }
+
   update(field) {
     return e => {
       this.setState({ [field]: e.currentTarget.value })
@@ -44,7 +48,6 @@ class PinForm extends React.Component {
     e.preventDefault();    
     this.props.action(this.state)
       .then(res => this.props.history.push(`/pins/${res.pin.id}`))
-    // this.props.history.push(`/pins/${res.pin.id}`);
   }
 
   render() {

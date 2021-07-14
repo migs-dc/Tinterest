@@ -9,6 +9,10 @@ class BoardForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount(){
+    this.props.clearErrors()
+  }
+
   update(field) {
     return e => {
       this.setState({ [field]: e.currentTarget.value })
@@ -19,10 +23,22 @@ class BoardForm extends React.Component {
     window.location.relaod(false);
   }
 
-  handleSubmit() {
+  renderErrors() {
+    return(
+      <ul className="errors">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();    
     this.props.action(this.state)
       .then(res => this.props.history.push(`/boards/${res.board.id}`))
-      // .then(res => console.log(res))
   }
 
   render() {
@@ -34,11 +50,13 @@ class BoardForm extends React.Component {
           </div>
 
           <h1>{this.props.formType}</h1>
+
           <form onSubmit={this.handleSubmit}>
             <input type="hidden" 
               name="authenticity_token" 
               value="<%= form_authenticity_token %>"/>
-              
+            
+            {this.renderErrors()}
             <input placeholder="Board Title"
               type="text"
               value={this.state.title}
