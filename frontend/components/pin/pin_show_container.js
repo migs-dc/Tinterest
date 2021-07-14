@@ -7,7 +7,13 @@ import PinShow from './pin_show'
 const mSTP = (state, {match}) => {
   const pinId = parseInt(match.params.pinId);
   const pin = selectPin(state.entities, pinId);
+  // console.log(pin);
+  // console.log(pin.author);
+
   const currentUser = state.entities.users[state.session.id];
+  // console.log(currentUser);
+  // const currentUser = state.entities.users[state.session.id];
+  // const boards = state.session.users;
   return { pinId, pin, currentUser };
 };
 

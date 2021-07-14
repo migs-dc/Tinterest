@@ -9,8 +9,8 @@ class pinShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchPin(this.props.pinId).then(()=> {
-      this.props.fetchUser(this.props.pin.user_id).then(res => {
-        this.setState({ username: res.user.username, loading: false })
+      this.props.fetchUser(this.props.currentUser.id).then(res => {
+        this.setState({ boards: res.user.boards, loading: false })
       })
     })
   }
@@ -35,12 +35,17 @@ class pinShow extends React.Component {
                 </>
                 : ""
               }
+              {/* {console.log(this.state.boards)} */}
+              <div>
+                
+              </div>
+              <button>save</button>
             </div>
             <div className="mid">
               <p>{this.props.pin.title}</p>
               <p>{this.props.pin.description}</p>
               <div className="author">
-                {this.state.username} 
+                {this.props.pin.author.username} 
                 {/* <p>CU ID: {this.props.currentUser.id}</p> */}
               </div>
             </div>
