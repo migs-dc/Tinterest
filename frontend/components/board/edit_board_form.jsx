@@ -53,7 +53,7 @@ class EditBoardForm extends React.Component {
     if (!board.description) board.description = '';
     return (
       <div className="background">
-        <div className="create-board">
+        <div className="create-board edit-board">
           <div className="close-button">
             <Link to="/">X</Link>
           </div>
@@ -70,7 +70,6 @@ class EditBoardForm extends React.Component {
                     onClick={() => this.delete(board.id)}>
               Delete Board
             </button>
-
             <input placeholder="Board Title"
               type="text"
               value={this.state.title}

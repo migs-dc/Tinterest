@@ -14,7 +14,6 @@ class Api::PinsController < ApplicationController
 
   def create
     @pin = Pin.new(pin_params)
-    @pin.user = current_user
     
     if @pin.save
       render :show
