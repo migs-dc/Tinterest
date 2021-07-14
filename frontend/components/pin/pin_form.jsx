@@ -29,7 +29,6 @@ class PinForm extends React.Component {
   }
 
   renderErrors() {
-    console.log(this.props.errors)
     return(
       <ul className="errors">
         {this.props.errors.map((error, i) => (

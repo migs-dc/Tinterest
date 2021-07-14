@@ -8,8 +8,8 @@ class EditPinForm extends React.Component {
   }
 
   delete(id){
-    this.props.deletePin(id);
-    this.props.history.push('/boards');
+    this.props.deletePin(id)
+      .then(() => this.props.history.push('/pins'))
   }
 
   render() {

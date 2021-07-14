@@ -22,11 +22,10 @@ class boardShow extends React.Component {
       return(
         <div className="board-show">
           <div>
-            {console.log(board.title)}
             <h1>{board.title}</h1>
           </div>
           <div>
-            <p>{board.username}</p>
+            <p>{board.author.username}</p>
           </div>
           <div>
             {board.user_id === this.props.currentUser.id ?

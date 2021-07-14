@@ -17,7 +17,7 @@ class EditBoardForm extends React.Component {
 
   handleSubmit() {
     this.props.action(this.state)
-      .then(res => this.props.history.push(`/boards/${res.board.id}`))
+      .then(() => this.props.history.push(`/boards/`))
   }
 
   componentDidMount(){
@@ -25,8 +25,8 @@ class EditBoardForm extends React.Component {
   }
 
   delete(id){
-    this.props.deleteBoard(id);
-    this.props.history.push('/boards');
+    this.props.deleteBoard(id)
+      .then(() => this.props.history.push('/boards'))
   }
 
   render() {
@@ -46,10 +46,9 @@ class EditBoardForm extends React.Component {
               value="<%= form_authenticity_token %>"/>
             <h1>{formType}</h1>
 
-            <button 
-              type="button" 
-              className="edit-delete-button"
-              onClick={() => this.delete(board.id)}>
+            <button type="button" 
+                    className="edit-delete-button"
+                    onClick={() => this.delete(board.id)}>
               Delete Board
             </button>
 

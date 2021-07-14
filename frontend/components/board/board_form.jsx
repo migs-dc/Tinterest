@@ -22,6 +22,7 @@ class BoardForm extends React.Component {
   handleSubmit() {
     this.props.action(this.state)
       .then(res => this.props.history.push(`/boards/${res.board.id}`))
+      // .then(res => console.log(res))
   }
 
   render() {
@@ -37,6 +38,7 @@ class BoardForm extends React.Component {
             <input type="hidden" 
               name="authenticity_token" 
               value="<%= form_authenticity_token %>"/>
+              
             <input placeholder="Board Title"
               type="text"
               value={this.state.title}

@@ -1,5 +1,7 @@
 json.extract! @board, :id, :title, :user_id
-json.extract! @board.user, :id, :email, :username
+json.author do
+  json.extract! @board.user, :id, :email, :username
+end
 
 # json.pins do
 #   @board.pins.each do |pin|

@@ -5,7 +5,7 @@ class Api::PinsController < ApplicationController
     @pins = Pin.all 
     render :index
     # render 'api/pins/index'
- end
+  end
 
   def show
     @pin = Pin.find(params[:id])
@@ -33,11 +33,11 @@ class Api::PinsController < ApplicationController
     end
   end
 
-  def destroy 
+  def destroy     
     @pin = Pin.find(params[:id])
 
     if @pin.destroy
-      render :index
+      index
     else
       render json: @pin.errors.full_messages, status: 422
     end

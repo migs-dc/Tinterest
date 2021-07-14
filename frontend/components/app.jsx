@@ -35,17 +35,19 @@ const App = () => (
     </header>
   
     <Switch>
-      <Route exact path="/" component={PinsIndexContainer} />
+      <Route exact path="/pins" component={PinsIndexContainer} />
       <AuthRoute2 exact path="/create-pin" component={CreatePinContainer} />
       <AuthRoute2 exact path="/pins/:pinId" component={PinShowContainer} />
       <AuthRoute3 exact path="/pins/:pinId/edit" component={EditPinContainer} />
-      
-      <AuthRoute2 exact path="/create-board" component={CreateBoardContainer} />
+      {/* <PinsIndexContainer /> */}
+    {/* </Switch>
+    <Switch> */}
       <AuthRoute2 exact path='/boards' component={BoardsIndexContainer} />      
+      <AuthRoute2 exact path="/create-board" component={CreateBoardContainer} />
       <AuthRoute2 exact path="/boards/:boardId" component={BoardShowContainer} />
       <AuthRoute3 exact path="/boards/:boardId/edit" component={EditBoardContainer} />
       
-      {/* <PinsIndexContainer /> */}
+      
     </Switch>
   </div>
 );
