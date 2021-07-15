@@ -13,11 +13,17 @@ class BoardsIndex extends React.Component {
   render(){
     return(
       <div className="board-index">
-        <h1>Boards</h1>
+        <h1>{this.props.user.username}</h1>
         <br />
         <div>
-          {this.props.boards.map(board => (
-            <BoardsIndexItem user={this.props.user} board={board} key={board.id} />))
+          {this.props.boards.map(board => {
+            if (board.user_id === this.props.user.id) {
+              return <BoardsIndexItem 
+                user={this.props.user}
+                board={board} 
+                key={board.id} />              
+            } 
+          })
           }
         </div>
 

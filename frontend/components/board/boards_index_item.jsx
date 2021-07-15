@@ -11,23 +11,11 @@ class BoardsIndexItem extends React.Component {
 
     return (
       <div>
-        { this.props.user ? 
-          <>
-          <Link to={`/boards/${id}`}>
-            <div>
-              <p>{title}</p>
-            </div>
-          </Link>
-          </>
-          :
-          <>
-          <Link to={`/login`}>
-            <div>
-              <p>{title}</p>
-            </div>
-          </Link>
-          </>
-        }
+        <Link to={`/boards/${id}`}>
+          <div>
+            <p>{title}</p>
+          </div>
+        </Link>
       </div>
     )
   }

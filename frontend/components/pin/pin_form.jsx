@@ -20,10 +20,6 @@ class PinForm extends React.Component {
     }
   }
 
-  delete(id) {
-    this.props.deletePin(id)
-  }
-
   resetPage() {
     this.setState({
       title: pin.title,
