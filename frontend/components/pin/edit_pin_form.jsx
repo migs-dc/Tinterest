@@ -4,8 +4,9 @@ import { withRouter } from "react-router-dom"
 class EditPinForm extends React.Component {
   constructor(props) {
     super(props);
-
+    
     this.state = this.props.pin;
+    this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -32,7 +33,8 @@ class EditPinForm extends React.Component {
     e.preventDefault();    
     console.log(this.state)
     this.props.action(this.state)
-      .then(res => this.props.history.push(`/pins/${res.pin.id}`))
+      // .then(res => this.props.history.push(`/pins/${res.pin.id}`))
+    this.openEdit();
   }
 
   renderErrors() {
@@ -49,9 +51,9 @@ class EditPinForm extends React.Component {
 
   render() {
     const { pin } = this.props
-    console.log(this.props)
-
-    if (!pin.description) pin.description = '';
+    // debugger
+    // if (!pin) return null; 
+    // pin.description = '';
     return (
       <div className="edit-form">
         <h1>{this.props.formType}</h1>

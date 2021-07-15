@@ -51,12 +51,25 @@
 
 .board-index-item {
 
-  img {
+  img, .img-icon-div {
     width: 200px;
+    width: 200px;
+    height: 200px;
 
     border: 1px solid lightgray;
     border-radius: 15px;
   }
+
+  .img-icon-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .far {
+      font-size: 50px;
+    }
+  }
+  
 
   p:first-of-type {
     font-size: 16px;

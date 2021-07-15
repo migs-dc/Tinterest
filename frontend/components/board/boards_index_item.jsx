@@ -15,7 +15,13 @@ class BoardsIndexItem extends React.Component {
       <div className="board-index-item">
         <Link to={`/boards/${id}`}>
           <div>
-            <img src={this.props.board.pins[0].image_url}/>
+            {
+              (pins.length < 1) ? 
+                <div className="img-icon-div">
+                  <i className="far fa-file-image"></i>
+                </div>
+                : <img src={pins[0].image_url}/>                
+            }
             <p>{title}</p>
             <p>pins: {pins.length}</p>
           </div>

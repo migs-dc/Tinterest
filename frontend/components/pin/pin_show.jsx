@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import EditPinContainer from './edit_pin_form_container'
+import EditPinForm from './edit_pin_form';
 
 class pinShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { loading: true };
-    this.handleToUpdate = this.handleToUpdate.bind(this)
+    this.state = { loading: true, edit: false };
+    this.handleToUpdate = this.handleToUpdate.bind(this);
+    this.openEdit = this.openEdit.bind(this);
   }
 
   componentDidMount() {
@@ -16,11 +19,10 @@ class pinShow extends React.Component {
         this.setState({top: firstTitle})
       })
     })
-    
   }
 
   handleToUpdate(title, id) {
-    this.setState({top: title, boardId: id, banana: true});
+    this.setState({top: title, boardId: id});
   }
 
   savePin(pinId) {
@@ -28,12 +30,23 @@ class pinShow extends React.Component {
     this.props.save(pinBoard)
   }
 
+  openEdit() {
+    this.setState({edit: !this.state.edit})
+  }
+
   render() {
     if (this.state.loading){
       return null;
     } else {
       return(
-        <div className="pin-show">
+        <div className="pin-show">        
+          {
+            (this.state.edit) ? 
+            <div className="background">
+              <EditPinContainer pin={this.props.pin} />
+            </div> 
+            : ""
+          }
           <div className="left">
             <img className="test" src={this.props.pin.image_url} />
           </div>
@@ -42,14 +55,12 @@ class pinShow extends React.Component {
               <div>
                 {this.props.pin.user_id === this.props.currentUser.id ?
                   <>
-                  <Link to={`${this.props.pin.id}/edit`}>
-                    <button>Edit/Delete</button>
-                  </Link>
+                    <button onClick={this.openEdit}>Edit/Delete</button>
                   </>
                   : ""
                 }              
               </div>
-              <DropDown top={this.state.top} banana={this.state.banana}>
+              <DropDown top={this.state.top}>
                 <ul className="dropdown">
                   {(this.state.boards !== undefined) ?
                     this.state.boards.map(board => (
@@ -76,7 +87,7 @@ class pinShow extends React.Component {
             </div>
             <div className="bot-nav">
               <a href={this.props.pin.image_url}>image link</a>
-            </div>   
+            </div>
           </div>
         </div>
       )

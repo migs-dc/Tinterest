@@ -10,7 +10,7 @@
   align-items: center;
 
   .create-board {
-    border: 1px solid lightgray;
+    border: 1px solid rgb(90, 80, 80);
     background: white;
 
     height: 300px;
@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    // align-items: center;
 
     > form {
       height: 200px;
@@ -55,7 +56,14 @@
   }
 
   .edit-board {
-    height: 500px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    // background: lightgreen;
   }
 }
 

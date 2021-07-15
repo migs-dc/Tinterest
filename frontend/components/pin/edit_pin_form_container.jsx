@@ -2,11 +2,13 @@ import { connect } from 'react-redux'
 import EditPinForm from './edit_pin_form';
 import { fetchPin, updatePin, deletePin, clearErrors } from '../../actions/pin_actions'
 
-const mSTP = (state, ownProps) => ({
-  errors: state.errors.pin,
-  pin: state.entities.pins[ownProps.match.params.pinId],
-  formType: 'Update Pin'
-});
+const mSTP = ( state ) => {
+  const errors = state.errors.pin;
+  // const pin = state.entities.pins[ownProps.match.params.pinId];
+  // const formType = 'Update Pin';
+  // return { errors, pin, formType }
+  return { errors }
+};
 
 const mDTP = dispatch => ({
   fetchPin: pinId => dispatch(fetchPin(pinId)),
