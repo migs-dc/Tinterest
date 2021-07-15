@@ -7,7 +7,7 @@ const mSTP = state => ({
   pin: {
     title: '',
     image_url: '',
-    user_id: state.session.userId,
+    user_id: state.session.id,
     description: '',
   },
   username: state.entities.users.username,
