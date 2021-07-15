@@ -1,0 +1,24 @@
+.dropdown {
+  position: absolute;
+  top: 160px;
+  width: 150px;
+  padding: 0.25rem;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  li {
+    border-radius: 5px;
+    // transition: background;
+    padding: 0.5rem;
+    margin: 5px;
+  }
+
+  li:hover {
+    cursor: pointer;
+    background: lightgray;
+  }
+  
+}

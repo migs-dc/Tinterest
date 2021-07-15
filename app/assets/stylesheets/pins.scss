@@ -45,6 +45,9 @@
     padding: 10px;
 
     .top-nav {
+      display: flex;
+      justify-content: flex-end;
+
       margin: 10px 0;
       border: 0px solid grey;
       padding: 0 5px;
@@ -53,9 +56,16 @@
         font-size: 15px;
         font-weight: bold;
         color: black;
-    
         padding: 10px;
+
+        height: 40px;
+        background: white;
+      }
+
+      button.save {
+        color: white;
         border-radius: 50px;
+        background: rgba(230, 0, 35, 1);
       }
     }
 

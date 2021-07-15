@@ -6,7 +6,6 @@ class EditPinForm extends React.Component {
     super(props);
 
     this.state = this.props.pin;
-    console.log(this.state)
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -49,9 +48,9 @@ class EditPinForm extends React.Component {
   }
 
   render() {
-    const { action, formType, pin, errors } = this.props
+    const { pin } = this.props
+    console.log(this.props)
 
-    if (!pin) return null;
     if (!pin.description) pin.description = '';
     return (
       <div className="edit-form">

@@ -7,13 +7,17 @@ class BoardsIndexItem extends React.Component {
   }
 
   render() {
-    const { id, title, user_id } = this.props.board
+    const { id, title, pins } = this.props.board    
+    // const src = this.props.board.pins[0].image_url
+    // console.log(this.props.board.pins[0].image_url)
 
     return (
-      <div>
+      <div className="board-index-item">
         <Link to={`/boards/${id}`}>
           <div>
+            <img src={this.props.board.pins[0].image_url}/>
             <p>{title}</p>
+            <p>pins: {pins.length}</p>
           </div>
         </Link>
       </div>

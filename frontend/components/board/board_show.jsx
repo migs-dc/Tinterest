@@ -40,7 +40,7 @@ class boardShow extends React.Component {
           <div>
             {(board.pins !== undefined) ?
               board.pins.map(pin => (
-                <PinsIndexItem pin={pin} key={pin.id} />
+                <PinsIndexItem user={this.props.currentUser} pin={pin} key={pin.id} />
               ))
               : <p>Board is empty</p>
             }

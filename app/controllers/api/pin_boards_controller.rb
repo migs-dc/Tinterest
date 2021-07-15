@@ -1,10 +1,10 @@
 class Api::PinBoardsController < ApplicationController
   before_action :require_logged_in, only: [:create, :delete]
 
-def index
-  @pin_boards = PinBoard.all
-  render :index
-end
+  def index
+    @pin_boards = PinBoard.all
+    render :index
+  end
 
   def create 
     @pin_board = PinBoard.new(pin_board_params)

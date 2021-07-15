@@ -55,7 +55,7 @@ class EditBoardForm extends React.Component {
       <div className="background">
         <div className="create-board edit-board">
           <div className="close-button">
-            <Link to="/">X</Link>
+            <Link to="/boards">X</Link>
           </div>
           <form onSubmit={this.handleSubmit}>
             <input type="hidden" 
