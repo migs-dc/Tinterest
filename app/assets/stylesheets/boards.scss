@@ -1,15 +1,60 @@
 .board-index {
+  // box-sizing: border-box;
   border: 1px solid lightgray;
   background: white;
-  width: 900px;
+  width: 90%;
 
   border-radius: 20px;
   margin: 20px auto;
   padding: 20px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+
   > div {
     display: flex;
     justify-content: space-evenly;
+  }
+
+  div.dp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid lightgray;
+    border-radius: 100px;
+
+    width: 125px;
+    height: 125px;
+    margin-top: 10px;
+
+    .far {
+      font-size: 50px;
+    }
+  }
+
+  .cb-button {    
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+
+    margin-right: 12px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 0px solid rgb(231, 228, 228);
+    margin: 0 0 20px 0;
+  }
+
+  .board-index-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    // width: 1000px;
   }
 }
 
@@ -50,6 +95,8 @@
 }
 
 .board-index-item {
+
+  margin: 0 10px;
 
   img, .img-icon-div {
     width: 200px;

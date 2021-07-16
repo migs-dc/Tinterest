@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import BoardsIndexItem from './boards_index_item'
 
 class BoardsIndex extends React.Component {
@@ -18,9 +19,17 @@ class BoardsIndex extends React.Component {
     } else {
       return(
         <div className="board-index">
+          <div className="dp">
+          {
+            this.props.currentUser.displayPicture 
+            ? <img src={this.props.displayPicture} className="nav-img"/>
+            : <i className="far fa-user"></i>
+          }
+          </div>
           <h1>{this.props.user.username}</h1>
           <br />
-          <div>
+          <Link to='/create-board'><button className="cb-button">Create Board</button></Link>
+          <div className="board-index-box">
             {this.props.boards.map(board => {
               if (board.user_id === this.props.user.id) {
                 return <BoardsIndexItem 

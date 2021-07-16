@@ -4,6 +4,7 @@
   z-index: 2;
   height: 100%;
   width: 100%;
+  top: 0;
 
   display: flex;
   justify-content: center;
@@ -13,31 +14,34 @@
     border: 1px solid rgb(90, 80, 80);
     background: white;
 
-    height: 300px;
-    width: 400px;
-
     border-radius: 20px;
     margin: 20px;
-    padding: 20px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
     // align-items: center;
 
-    .close-button {
-      margin: 0;
-    }
-
     > form {
-      height: 200px;
+      // height: 200px;
       width: 300px;
-
+      
       display: flex;
       flex-direction: column;
       align-items: center;
+      
+      margin: 0 auto;
+      padding: 0 40px;
 
-      margin: 10px auto;
+      .close-button {
+        text-align: right;
+        margin: 0;
+        width: 130%;
+      }
+
+      h1 {
+        margin-top: 0px;
+      }
 
       button, input {
         font-size: 16px;

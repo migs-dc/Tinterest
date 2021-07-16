@@ -12,8 +12,17 @@ const Greeting = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <hgroup className="header-group">
       <Link to='/create-pin'><button className="pb">Create Pin</button></Link>
-      <Link to='/create-board'><button className="pb">Create Board</button></Link>
-      <Link to='/boards'><button className="pb">{currentUser.username}</button></Link>
+      {/* <Link to='/create-board'><button className="pb">Create Board</button></Link> */}
+      {/* <Link to='/boards'><button className="pb">{currentUser.username}</button></Link> */}
+      <Link to='/boards'>
+        <div className="nav-icon">
+          {
+            currentUser.displayPicture 
+            ? <img src={displayPicture} className="nav-img"/>
+            : <i className="far fa-user"></i>
+          }
+        </div>
+      </Link>
       <Link to='/pins'>
         <button className="header-button" onClick={logout}>Log out</button>
       </Link>

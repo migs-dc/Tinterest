@@ -4,7 +4,8 @@ import BoardsIndex from './boards_index'
 
 const mSTP = ({ session, entities }) => ({
   boards: Object.values(entities.boards),
-  user: entities.users[session.id]
+  user: entities.users[session.id],
+  currentUser: entities.users[session.id]
 })
 
 const mDTP = dispatch => ({

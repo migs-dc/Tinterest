@@ -57,6 +57,25 @@ div.login-signup {
   flex-direction: row;
   align-items: center;
 
+  .nav-icon {
+    padding: 7px;
+    border: 1px solid lightgray;
+    border-radius: 50px;
+
+    height: 35px;
+    width: 35px;
+    padding: 0;
+    margin-left: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .far {
+      font-size: 17px;
+    }
+  }
+
   button {
     color: white;
     font-size: 15px;

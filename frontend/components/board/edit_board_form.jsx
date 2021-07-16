@@ -52,13 +52,15 @@ class EditBoardForm extends React.Component {
     return (
       <div className="background">
         <div className="create-board edit-board">
-          <div className="close-button">
-            <a onClick={this.props.closeEdit}>X</a>
-          </div>
+          
           <form onSubmit={this.handleSubmit}>
             <input type="hidden" 
               name="authenticity_token" 
               value="<%= form_authenticity_token %>"/>
+
+            <div className="close-button">
+              <a onClick={this.props.closeEdit}>X</a>
+            </div>
 
             <h1>{formType}</h1>
             {this.renderErrors()}
@@ -68,6 +70,9 @@ class EditBoardForm extends React.Component {
                     onClick={() => this.delete(board.id)}>
               Delete Board
             </button>
+            <br />
+            <br />
+            <br />
             <input placeholder="Board Title"
               type="text"
               value={this.state.title}
