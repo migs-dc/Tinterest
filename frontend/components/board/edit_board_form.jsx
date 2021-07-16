@@ -9,9 +9,9 @@ class EditBoardForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount(){
-    this.props.fetchBoard(this.props.match.params.boardId)
-  }
+  // componentDidMount(){
+  //   this.props.fetchBoard(this.props.match.params.boardId)
+  // }
 
   componentWillUnmount(){
     this.props.clearErrors()

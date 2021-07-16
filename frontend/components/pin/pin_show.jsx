@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import EditPinContainer from './edit_pin_form_container'
-import EditPinForm from './edit_pin_form';
 
 class pinShow extends React.Component {
   constructor(props) {
@@ -42,8 +41,8 @@ class pinShow extends React.Component {
         <div className="pin-show">        
           {
             (this.state.edit) ? 
-            <div className="background">
-              <EditPinContainer pin={this.props.pin} />
+            <div className="pin-edit-background">
+              <EditPinContainer pin={this.props.pin} openEdit={openEdit} />
             </div> 
             : ""
           }
@@ -109,4 +108,4 @@ function DropDown(props) {
   );
 }
 
-export default pinShow;
+export default withRouter(pinShow);

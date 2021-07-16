@@ -93,3 +93,13 @@
   } 
 }
 
+
+
+.pin-edit-background {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 2;
+
+  // height: 100%;
+  // width: 100%;
+}

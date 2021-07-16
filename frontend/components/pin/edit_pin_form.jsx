@@ -10,9 +10,9 @@ class EditPinForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount(){
-    this.props.fetchPin(this.props.match.params.pinId)
-  }
+  // componentDidMount(){
+  //   this.props.fetchPin(this.props.match.params.pinId)
+  // }
 
   componentWillUnmount(){
     this.props.clearErrors()
@@ -25,16 +25,18 @@ class EditPinForm extends React.Component {
   }
 
   delete(id){
+    // console.log("delete")
     this.props.deletePin(id)
-      .then(() => this.props.history.push('/pins'))
+      // .then(() => this.props.history.push('/'))
+      // .then(() => console.log("damn"))
+    this.props.history.push('/')
   }
 
   handleSubmit(e) {
     e.preventDefault();    
     console.log(this.state)
     this.props.action(this.state)
-      // .then(res => this.props.history.push(`/pins/${res.pin.id}`))
-    this.openEdit();
+      .then(res => this.props.history.push(`/pins/${res.pin.id}`))
   }
 
   renderErrors() {
