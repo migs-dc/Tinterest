@@ -9,10 +9,6 @@ class EditBoardForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // componentDidMount(){
-  //   this.props.fetchBoard(this.props.match.params.boardId)
-  // }
-
   componentWillUnmount(){
     this.props.clearErrors()
   }
@@ -26,12 +22,13 @@ class EditBoardForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state)
-      .then(() => this.props.history.push(`/boards/`))
+      .then(() => this.props.closeEdit())
+      // .then(() => this.props.history.push('/boards'))
   }
 
   delete(id){
     this.props.deleteBoard(id)
-      .then(() => this.props.history.push('/boards'))
+    this.props.history.push('/boards')
   }
 
   renderErrors() {
@@ -47,7 +44,7 @@ class EditBoardForm extends React.Component {
   }
 
   render() {
-    const { action, formType, board, errors } = this.props
+    const { formType, board } = this.props
 
     if (!board) return null;
     if (!board.description) board.description = '';
@@ -55,7 +52,7 @@ class EditBoardForm extends React.Component {
       <div className="background">
         <div className="create-board edit-board">
           <div className="close-button">
-            <Link to={`/boards/${board.id}`}>X</Link>
+            <a onClick={this.props.closeEdit}>X</a>
           </div>
           <form onSubmit={this.handleSubmit}>
             <input type="hidden" 

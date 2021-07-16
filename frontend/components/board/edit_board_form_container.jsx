@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import EditBoardForm from './edit_board_form';
 import { fetchBoard, updateBoard, deleteBoard, clearErrors } from '../../actions/board_actions'
 
-const mSTP = (state, ownProps) => ({
+const mSTP = (state) => ({
   // board: state.entities.boards[ownProps.match.params.boardId],
   errors: state.errors.board,
   formType: 'Update Board'

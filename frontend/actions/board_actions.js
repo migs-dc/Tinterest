@@ -37,8 +37,8 @@ export const createBoard = board => dispatch => APIUtil.createBoard(board)
   )
 
 export const updateBoard = board => dispatch => APIUtil.updateBoard(board)
-  .then(updatedBoard => dispatch(receiveBoard(updatedBoard)),
-    error => dispatch(receiveErrors(error.responseJSON))
+  .then(updatedBoard => (dispatch(receiveBoard(updatedBoard)))
+    // , error => (dispatch(receiveErrors(error.responseJSON)))
   )
 
 export const deleteBoard = boardId => dispatch => APIUtil.deleteBoard(boardId)
