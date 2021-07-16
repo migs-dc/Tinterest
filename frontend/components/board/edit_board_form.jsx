@@ -29,6 +29,7 @@ class EditBoardForm extends React.Component {
   delete(id){
     this.props.deleteBoard(id)
     this.props.history.push('/boards')
+      // .then(() => this.props.history.push('/boards'))
   }
 
   renderErrors() {

@@ -12,7 +12,7 @@ const boardsReducer = (prevState = {}, action) => {
     case REMOVE_BOARD:
       let nextState = Object.assign({}, prevState);
       delete nextState[action.boardId]
-      return Object.assign({}) 
+      return nextState
 
     default:
       return prevState;

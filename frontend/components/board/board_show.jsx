@@ -11,8 +11,8 @@ class boardShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchBoard(this.props.boardId).then(() => {
-      this.setState({ loading: false }) 
+    this.props.fetchBoard(this.props.boardId)
+      .then(() => {this.setState({ loading: false }) 
     });
   }
 

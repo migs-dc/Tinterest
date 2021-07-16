@@ -25,6 +25,10 @@
     justify-content: center;
     // align-items: center;
 
+    .close-button {
+      margin: 0;
+    }
+
     > form {
       height: 200px;
       width: 300px;

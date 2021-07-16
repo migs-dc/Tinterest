@@ -45,14 +45,12 @@ class pinShow extends React.Component {
     } else {
       return(
         <div className="pin-show">        
-          <div className="pin-edit-background">
           { 
             this.state.edit ?
             <EditPinContainer pin={this.props.pin} 
               closeEdit={() => this.closeEdit().bind(this)} />
             : null
           }            
-          </div> 
           <div className="left">
             <img className="test" src={this.props.pin.image_url} />
           </div>
@@ -66,23 +64,25 @@ class pinShow extends React.Component {
                   : ""
                 }              
               </div>
-              <DropDown top={this.state.top}>
-                <ul className="dropdown">
-                  {(this.state.boards !== undefined) ?
-                    this.state.boards.map(board => (
-                      <a onClick={() => this.handleToUpdate(board.title, board.id)}>
-                        <li className="items" key={board.id}>
-                          {board.title}
-                        </li>
-                      </a>
-                    ))
-                    : <li>you have no boards</li> // create a board instead take this out of the ul
-                  }
-                </ul>
-              </DropDown>
-              <button className="save" onClick={() => this.savePin(this.props.pin.id)}>
-                save
-              </button>
+              <div className="top-nav-right">
+                <DropDown top={this.state.top}>
+                  <ul className="dropdown">
+                    {(this.state.boards !== undefined) ?
+                      this.state.boards.map(board => (
+                        <a onClick={() => this.handleToUpdate(board.title, board.id)}>
+                          <li className="items" key={board.id}>
+                            {board.title}
+                          </li>
+                        </a>
+                      ))
+                      : <li>you have no boards</li> // create a board instead take this out of the ul
+                    }
+                  </ul>
+                </DropDown>
+                <button className="save" onClick={() => this.savePin(this.props.pin.id)}>
+                  save
+                </button>
+              </div>
             </div>
             <div className="mid">
               <p>{this.props.pin.title}</p>

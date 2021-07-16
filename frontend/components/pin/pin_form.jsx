@@ -22,9 +22,9 @@ class PinForm extends React.Component {
 
   resetPage() {
     this.setState({
-      title: pin.title,
-      description: pin.description,
-      image_url: pin.image_url
+      title: this.props.pin.title,
+      description: this.props.pin.description,
+      image_url: this.props.pin.image_url
     })
   }
 

@@ -47,11 +47,15 @@
 
     .top-nav {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
 
       margin: 10px 0;
       border: 0px solid grey;
       padding: 0 5px;
+
+      .top-nav-right {
+        display: flex;
+      }
 
       button {
         font-size: 15px;
@@ -71,6 +75,8 @@
     }
 
     .mid {
+      padding-left: 10px;
+
       width: auto;
       height: 500px;
       p {
@@ -83,12 +89,16 @@
       .author {
         border-top: 1px solid lightgray;
         // border-radius: 15px;
-        padding: 10px;
-        margin: 10px auto;
-        width: 300px;
+        padding: 20px;
+        margin: 0 0;
+        width: 340px;
 
         text-align: center;
       }
+    }
+
+    .bot-nav {
+      padding: 0 0 50px 20px;
     }
   } 
 }

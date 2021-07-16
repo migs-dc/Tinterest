@@ -23,6 +23,7 @@ class EditPinForm extends React.Component {
   delete(id){
     this.props.deletePin(id)
     this.props.history.push('/')
+      // .then(() => this.props.history.push('/'))
   }
 
   handleSubmit(e) {
@@ -53,17 +54,23 @@ class EditPinForm extends React.Component {
     // if (!this.props.edit){
     //   return null;
     // } else {
-      return  (
-        <div className="edit-form">
-        <h1>{this.props.formType}</h1>
-        
-        <div>
-          <form onSubmit={this.handleSubmit} className="pin-form">
-            <input type="hidden" 
-              name="authenticity_token" 
-              value="<%= form_authenticity_token %>"/>
+    return  (
+      <div className="edit-form">
+              
+        <form onSubmit={this.handleSubmit} className="pin-form">
+          <input type="hidden" 
+            name="authenticity_token" 
+            value="<%= form_authenticity_token %>"/>
 
-            <div className="top">
+          <div className="title-x">
+            <p></p>
+            <div className="close-button">
+              <a onClick={this.props.closeEdit}>X</a>
+            </div>
+          </div>
+          <h1 className="edit-title">Edit Pin</h1>  
+          <div className="top-edit">
+            <div>
               <button type="button" onClick={this.resetPage}>Reset</button>              
               <button 
                 type="button" 
@@ -71,43 +78,36 @@ class EditPinForm extends React.Component {
                 onClick={() => this.delete(pin.id)}>
                 Delete
               </button>
+            </div>
+            <div className="right-top">
               {this.renderErrors()} 
-              <button>Save</button>
+              <button className="save-button">Save</button>
+            </div>                
+          </div>
+          <div className="inner-form">
+            <div className="info">
+              <br />
+              <input placeholder="Add your title"
+                type="text"
+                value={this.state.title}
+                onChange={this.update('title')}
+              />
+              
+              <br /><br />
+              <textarea placeholder="Tell everyone what your Pin is about"
+                type="text"
+                value={this.state.description}
+                onChange={this.update('description')}
+              />           
+              <br />
+              <input placeholder="Add a destination link"
+                type="text"
+                value={this.state.image_url}
+                onChange={this.update('image_url')}
+              />
             </div>
-            <div className="inner-form">
-              <div className="upload-box">
-                <div>
-                  Drag and drop 
-                  <br />
-                  or
-                  <br />
-                  Click to upload
-                </div>
-              </div>
-              <div className="info">
-                <br />
-                <input placeholder="Add your title"
-                  type="text"
-                  value={this.state.title}
-                  onChange={this.update('title')}
-                />
-                
-                <br /><br />
-                <textarea placeholder="Tell everyone what your Pin is about"
-                  type="text"
-                  value={this.state.description}
-                  onChange={this.update('description')}
-                />           
-                <br />
-                <input placeholder="Add a destination link"
-                  type="text"
-                  value={this.state.image_url}
-                  onChange={this.update('image_url')}
-                />
-              </div>
-            </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
       );
     }
