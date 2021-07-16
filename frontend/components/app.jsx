@@ -20,7 +20,7 @@ import CreateBoardContainer from './board/create_board_form_container'
 import EditBoardContainer from './board/edit_board_form_container'
 
 const App = () => (
-  <div>
+  <div className="name">
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
@@ -47,8 +47,7 @@ const App = () => (
       <AuthRoute2 exact path="/create-board" component={CreateBoardContainer} />
       <AuthRoute2 exact path="/boards/:boardId" component={BoardShowContainer} />
       {/* <AuthRoute3 exact path="/boards/:boardId/edit" component={EditBoardContainer} /> */}
-      
-      
+    
       <PinsIndexContainer />
     </Switch>
   </div>
