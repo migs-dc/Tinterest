@@ -44,7 +44,7 @@ class BoardForm extends React.Component {
   render() {
     return (
       <div className="background">
-        <div className="create-board">
+        <div className="create-board create">
           <div className="close-button">
             <Link to="/">X</Link>
           </div>
