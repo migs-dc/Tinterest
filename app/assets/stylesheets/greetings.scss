@@ -1,11 +1,13 @@
 .top-nav {
-  // position: relative;
+  // position: fixed;
+  // width: 100%;
+
   display: flex;
   justify-content: space-between;
 
   background: white;
-  // width: 100%;
-  padding: 0px 20px 0 20px;
+  // padding: 0px 20px 0 20px;
+  padding-left: 1px;
   border-bottom: 1px solid lightgray;
 }
 
@@ -53,6 +55,7 @@ div.login-signup {
 // personalGreeting (logged in user)
 
 .header-group {
+
   display: flex;
   flex-direction: row;
   align-items: center;

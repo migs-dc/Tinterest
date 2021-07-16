@@ -24,6 +24,12 @@ u3 = User.create!(
   email: 'migs@email.com'
 )
 
+u4 = User.create!(
+  username: 'Ekmek',
+  password: 'password',
+  email: 'ekmek@email.com'
+)
+
 p1 = Pin.create!(
   title: 'Title One',
   user_id: 1,
@@ -40,7 +46,7 @@ p2 = Pin.create!(
 p3 = Pin.create!(
   title: 'a long title just to test asdfasdfasdfasdf',
   user_id: 2,
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   image_url: "https://i.imgur.com/sbgijEo.png"
 )
 
@@ -123,3 +129,88 @@ pb7 = PinBoard.create!(
   board_id: 3,
   pin_id: 3
 ) 
+
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://imgur.com/CHZRQD5.jpg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/sd2Lgzc.jpeg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/oFDk0wn.jpeg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://imgur.com/CHZRQD5.jpg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/oMiiKre.jpeg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/z7xqfBP.jpeg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/mOHUDPQ.jpeg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/WkWTZbN.jpeg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/OCoMCNM.jpeg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/erICBwG.jpeg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/DUwdwWN.jpeg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/NKrCjer.jpeg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/8K2IkDx.jpeg"
+)
+Pin.create!(
+  title: 'a long title just to test asdfasdfasdfasdf',
+  user_id: 3,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  image_url: "https://i.imgur.com/vBCjirJ.jpeg"
+)

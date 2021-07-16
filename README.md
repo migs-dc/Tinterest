@@ -1,24 +1,2 @@
-# README
+Tinterest is a Pinterest full-stack clone. It is an social media app based on a visual discovery engine for finding colorful pictures, artworks, recipes and many other ideas.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
