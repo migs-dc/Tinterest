@@ -75,7 +75,7 @@ class pinShow extends React.Component {
                           </li>
                         </a>
                       ))
-                      : <li>you have no boards</li> // create a board instead take this out of the ul
+                      : <li>you have no boards</li>// create a board instead take this out of the ul
                     }
                   </ul>
                 </DropDown>
