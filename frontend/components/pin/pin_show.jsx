@@ -8,6 +8,7 @@ class pinShow extends React.Component {
     this.state = { loading: true, edit: false };
     this.handleToUpdate = this.handleToUpdate.bind(this);
     this.openEdit = this.openEdit.bind(this);
+    this.closeEdit = this.closeEdit.bind(this);
   }
 
   componentDidMount() {
@@ -30,7 +31,12 @@ class pinShow extends React.Component {
   }
 
   openEdit() {
-    this.setState({edit: !this.state.edit})
+    this.setState({edit: true})
+    // this.setState({edit: !this.state.edit})
+  }
+
+  closeEdit() {
+    this.setState({edit: false})
   }
 
   render() {
@@ -39,13 +45,14 @@ class pinShow extends React.Component {
     } else {
       return(
         <div className="pin-show">        
-          {
-            (this.state.edit) ? 
-            <div className="pin-edit-background">
-              <EditPinContainer pin={this.props.pin} openEdit={openEdit} />
-            </div> 
-            : ""
-          }
+          <div className="pin-edit-background">
+          { 
+            this.state.edit ?
+            <EditPinContainer pin={this.props.pin} 
+              closeEdit={() => this.closeEdit().bind(this)} />
+            : null
+          }            
+          </div> 
           <div className="left">
             <img className="test" src={this.props.pin.image_url} />
           </div>

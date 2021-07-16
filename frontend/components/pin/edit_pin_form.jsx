@@ -10,10 +10,6 @@ class EditPinForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // componentDidMount(){
-  //   this.props.fetchPin(this.props.match.params.pinId)
-  // }
-
   componentWillUnmount(){
     this.props.clearErrors()
   }
@@ -25,10 +21,7 @@ class EditPinForm extends React.Component {
   }
 
   delete(id){
-    // console.log("delete")
     this.props.deletePin(id)
-      // .then(() => this.props.history.push('/'))
-      // .then(() => console.log("damn"))
     this.props.history.push('/')
   }
 
@@ -36,7 +29,10 @@ class EditPinForm extends React.Component {
     e.preventDefault();    
     console.log(this.state)
     this.props.action(this.state)
-      .then(res => this.props.history.push(`/pins/${res.pin.id}`))
+      .then(() => this.props.closeEdit())
+      // .then(res => this.props.history.push(`/pins/${res.pin.id}`))
+      // .then(res => this.props.history.push('/'))
+    
   }
 
   renderErrors() {
@@ -53,18 +49,14 @@ class EditPinForm extends React.Component {
 
   render() {
     const { pin } = this.props
-    // debugger
-    // if (!pin) return null; 
-    // pin.description = '';
-    return (
-      <div className="edit-form">
+    
+    // if (!this.props.edit){
+    //   return null;
+    // } else {
+      return  (
+        <div className="edit-form">
         <h1>{this.props.formType}</h1>
-        <button 
-          type="button" 
-          className="delete-button"
-          onClick={() => this.delete(pin.id)}>
-          Delete Pin
-        </button>
+        
         <div>
           <form onSubmit={this.handleSubmit} className="pin-form">
             <input type="hidden" 
@@ -72,8 +64,14 @@ class EditPinForm extends React.Component {
               value="<%= form_authenticity_token %>"/>
 
             <div className="top">
-              <button type="button" onClick={this.resetPage}>Reset</button>
-              {this.renderErrors()}   
+              <button type="button" onClick={this.resetPage}>Reset</button>              
+              <button 
+                type="button" 
+                className="delete-button"
+                onClick={() => this.delete(pin.id)}>
+                Delete
+              </button>
+              {this.renderErrors()} 
               <button>Save</button>
             </div>
             <div className="inner-form">
@@ -111,8 +109,9 @@ class EditPinForm extends React.Component {
           </form>
         </div>
       </div>
-    );
-  }
+      );
+    }
+  // }
 }
 
 export default withRouter(EditPinForm)
