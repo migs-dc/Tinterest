@@ -14,7 +14,8 @@ a {
 // }
 
 body {
-  margin: 75px 0 0 0;
+  margin: 0;
+  // margin: 75px 0 0 0;
   font-family: Arial;
   background: rgb(238, 238, 238);
 }
@@ -25,10 +26,6 @@ body {
 
 button {
   border: 0px solid rgb(231, 228, 228);
-}
-
-input {
-
 }
 
 button:hover {
