@@ -51,7 +51,9 @@ class pinShow extends React.Component {
               closeEdit={() => this.closeEdit().bind(this)} />
             : null
           }            
-          <div className="left">
+          <div className="left"
+            // style={{backgroundImage: `url(${this.props.pin.image_url})` }}
+          >
             <img className="test" src={this.props.pin.image_url} />
           </div>
           <div className="right">
