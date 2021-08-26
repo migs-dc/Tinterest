@@ -22,8 +22,8 @@
   display: flex;
   background: white;
 
-  width: 850px;
-  height: 600px;
+  width: 1500px;
+  height: 900px;
 
   border-radius: 15px;
   margin: 40px auto 0 auto;
@@ -31,6 +31,7 @@
   .left {
     // border: 1px solid red;
     // margin: 0 20px 0 0;
+    width: 100%;
 
     background-size: cover;
     background-position: center;
@@ -47,7 +48,7 @@
 
   .right {
     // border: 1px solid red;
-    width: 406px;
+    width: 50%;
     padding: 10px;
 
     .top-nav {

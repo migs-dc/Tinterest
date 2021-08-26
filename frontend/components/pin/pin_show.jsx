@@ -52,9 +52,9 @@ class pinShow extends React.Component {
             : null
           }            
           <div className="left"
-            // style={{backgroundImage: `url(${this.props.pin.image_url})` }}
+            style={{backgroundImage: `url(${this.props.pin.image_url})` }}
           >
-            <img className="test" src={this.props.pin.image_url} />
+            {/* <img className="test" src={this.props.pin.image_url} /> */}
           </div>
           <div className="right">
             <div className="top-nav">
