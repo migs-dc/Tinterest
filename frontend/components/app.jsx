@@ -33,6 +33,10 @@ const App = () => (
         <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" className="logo"/>
         <p>Tinterest</p>
       </Link>
+      <div className="search-bar">
+        <input type="text" />
+        <button></button>
+      </div>
       <GreetingContainer />
     </header>
   
