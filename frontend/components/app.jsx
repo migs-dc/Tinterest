@@ -35,7 +35,7 @@ const App = () => (
       </Link>
       <div className="search-bar">
         <input type="text" />
-        <button></button>
+        <button><i class="fas fa-search"></i></button>
       </div>
       <GreetingContainer />
     </header>
