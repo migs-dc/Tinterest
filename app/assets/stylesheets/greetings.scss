@@ -12,7 +12,7 @@
   background: white;
   // padding: 0px 20px 0 20px;
   padding-left: 1px;
-  border-bottom: 1px solid lightgray;
+  // border-bottom: 1px solid lightgray;
 
   .search-bar {
     display: flex;
@@ -24,8 +24,9 @@
 
     input {
       width: 50%;
-      height: 50%;
+      height: 40%;
       border-radius: 15px;
+      border: 1px solid lightgray;
     }
 
     button { 
@@ -110,6 +111,7 @@ div.login-signup {
     color: white;
     font-size: 15px;
     font-weight: bold;
+    white-space: nowrap;
 
     background: rgba(230, 0, 35, 1); 
     margin: 10px 15px 10px 5px;
