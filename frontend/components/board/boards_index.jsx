@@ -29,6 +29,7 @@ class BoardsIndex extends React.Component {
           <h1>{this.props.user.username}</h1>
           <br />
           <Link to='/create-board'><button className="cb-button">Create Board</button></Link>
+          <button className="follow-button">Follow</button>
           <div className="board-index-box">
             {this.props.boards.map(board => {
               if (board.user_id === this.props.user.id) {

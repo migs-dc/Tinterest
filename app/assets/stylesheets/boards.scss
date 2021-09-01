@@ -37,7 +37,7 @@
     }
   }
 
-  .cb-button {    
+  .cb-button, .follow-button {    
     font-size: 15px;
     font-weight: bold;
     color: black;
@@ -47,6 +47,11 @@
     border-radius: 50px;
     border: 0px solid rgb(231, 228, 228);
     margin: 0 0 20px 0;
+  }
+
+  button.follow-button {
+    background: rgba(230, 0, 35, 1);
+    color: white;
   }
 
   .board-index-box {
