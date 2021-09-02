@@ -34,8 +34,8 @@ const App = () => (
         <p>Tinterest</p>
       </Link>
       <div className="search-bar">
-        <input type="text" />
-        <button><i class="fas fa-search"></i></button>
+        <input placeholder="Search" type="text" />
+        {/* <button><i class="fas fa-search"></i></button> */}
       </div>
       <GreetingContainer />
     </header>
