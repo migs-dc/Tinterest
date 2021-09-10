@@ -7,7 +7,6 @@ const mSTP = (state, {match}) => {
   const boardId = parseInt(match.params.boardId);
   const board = selectBoard(state.entities, boardId);
   const currentUser = state.entities.users[state.session.id];
-  // const pins = Object.values(state.entities.boards.pins);
   return { boardId, board, currentUser};
 };
 
