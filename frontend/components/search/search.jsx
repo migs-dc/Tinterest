@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Search = (props) => {
 
-
   return(
     <div key={Math.random()}>
         <div className='search'>  
