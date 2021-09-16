@@ -80,6 +80,10 @@ class EditBoardForm extends React.Component {
             />
             <br />
             <button>{this.props.formType}</button>
+
+            {/* add display board*/}
+
+
           </form>
         </div>
       </div>
