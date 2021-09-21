@@ -18,4 +18,3 @@ const mDTP = dispatch => ({
 });
 
 export default connect(mSTP, mDTP)(BoardForm);
-//where is the create board container
