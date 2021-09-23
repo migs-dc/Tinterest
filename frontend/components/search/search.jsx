@@ -1,25 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import pin_index from "../pin/pins_index"
 
 const Search = (props) => {
 
     return(
-        <div className='search'>  
-            <form className='search-form'>
-                <div className='search-input'>
-                    <input type="text" placeholder="Search for a Pin or a Board" value={search} onChange={
-                        e => setSearch(e.target.value)
-                    }/>
-                </div> 
-                <div className="search-button">
-                    <Link to = '/pins'>
-                        <button type='submit' className='search-button'>
-                            <i className="fas fa-search"></i>
-                        </button>
-                    </Link>
-                </div>
-            </form>
-        </div>     
+        <div>
+            <pin_index />
+        </div>
     )
 }
 
