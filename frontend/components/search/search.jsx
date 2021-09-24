@@ -4,7 +4,6 @@ import pin_index from "../pin/pins_index"
 
 const Search = (props) => {
 
-
     return(
         <div>
             <pin_index />
