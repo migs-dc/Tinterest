@@ -6,10 +6,17 @@ class follows extends React.Component {
   }
 
   render(){
-    return null;
-    // return(
-      // not entirely sure what to put in here right now
-      // 
-    // )
+    
+    return(
+      //not entirely sure what to put in here right now
+      
+      <div>
+        <div>
+          
+        </div>
+      </div>
+
+
+    )
   }
 }
