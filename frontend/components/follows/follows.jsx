@@ -8,7 +8,8 @@ class follows extends React.Component {
   render(){
     return null;
     // return(
-
+      // not entirely sure what to put in here right now
+      // 
     // )
   }
 }
