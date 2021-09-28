@@ -10,8 +10,8 @@ class follows extends React.Component {
     return(
       //not entirely sure what to put in here right now
       
-      <div>
-        <div>
+      <div className="search-results">
+        <div className="search-result-items">
           
         </div>
       </div>
