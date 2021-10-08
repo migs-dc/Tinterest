@@ -17,6 +17,8 @@ import BoardsIndexContainer from './board/boards_index_container'
 import BoardShowContainer from './board/board_show_container'
 import CreateBoardContainer from './board/create_board_form_container'
 
+import SearchContainer from './search/search_container'
+
 const App = () => (
   <div className="name">
     <Switch>
@@ -31,10 +33,7 @@ const App = () => (
         <img src='https://i.imgur.com/DLuTVLr.png' alt="logo" className="logo"/>
         <p>Tinterest</p>
       </Link>
-      <div className="search-bar">
-        <input placeholder="Search" type="text" />
-        {/* <button><i class="fas fa-search"></i></button> */}
-      </div>
+      <SearchContainer />
       <GreetingContainer />
     </header>
   

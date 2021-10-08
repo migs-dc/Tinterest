@@ -5,8 +5,9 @@ import pin_index from "../pin/pins_index"
 const Search = (props) => {
 
     return(
-        <div>
-            <pin_index />
+        <div className="search-bar">
+            <input placeholder="Search" type="text" />
+            <button><i class="fas fa-search"></i></button>
         </div>
     )
 }
