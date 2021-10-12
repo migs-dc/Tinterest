@@ -14,4 +14,8 @@ class Pin < ApplicationRecord
   has_many :boards,
     through: :saves,
     source: :board
+
+  def self.in_bounds(bounds)
+    # self.where("pins.title LIKE ?", [])
+  end
 end

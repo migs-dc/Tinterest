@@ -1,3 +1,11 @@
+// export const fetchPins = () => (
+//   $.ajax({
+//     method: 'GET',
+//     url: '/api/pins'
+//   })
+// )
+
+// for filters
 export const fetchPins = () => (
   $.ajax({
     method: 'GET',
