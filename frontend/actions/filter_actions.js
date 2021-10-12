@@ -1,5 +1,6 @@
+import { fetchPins } from './bench_actions'
+
 export const UPDATE_FILTER = 'UPDATE_FILTER';
-export const CLEAR_FILTER = 'CLEAR_FILTER';
 
 export const changeFilter = (filter, value) => ({
     type: UPDATE_FILTER,
@@ -7,14 +8,7 @@ export const changeFilter = (filter, value) => ({
     value
 });
 
-export const clearFilter = () => ({
-    type: CLEAR_FILTER,
-})  
-
 export const updateFilter = (filter, value) => (dispatch) => {
     dispatch(changeFilter(filter, value))
+    return fetchPins(getState().ui.filters)(dispatch);
 };
-
-export const clearFilters = () => dispatch => {
-    dispatch(clearFilter())
-}

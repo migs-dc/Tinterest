@@ -6,10 +6,11 @@
 // )
 
 // for filters
-export const fetchPins = () => (
+export const fetchPins = data => (
   $.ajax({
     method: 'GET',
-    url: '/api/pins'
+    url: '/api/pins',
+    data
   })
 )
 
