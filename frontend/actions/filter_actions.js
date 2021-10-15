@@ -8,7 +8,7 @@ export const changeFilter = (filter, value) => ({
     value
 });
 
-export const updateFilter = (filter, value) => (dispatch) => {
-    dispatch(changeFilter(filter, value))
+export const updateFilter = (filter) => (dispatch) => {
+    dispatch(changeFilter(filter))
     return fetchPins(getState().ui.filters)(dispatch);
 };
