@@ -2,11 +2,11 @@ class Api::PinsController < ApplicationController
   before_action :require_logged_in, only: [:create, :edit, :update, :destroy]
 
   def index
-    @pins = Pin.all
+    # @pins = Pin.all
     @pins = bounds ? Pin.in_bounds(param[:bounds]) : Pin.all
     
     render :index
-    render 'api/pins/index'
+    # render 'api/pins/index'
   end
 
   def show
