@@ -6,7 +6,7 @@ class Api::PinsController < ApplicationController
     @pins = bounds ? Pin.in_bounds(param[:bounds]) : Pin.all
     
     render :index
-    # render 'api/pins/index'
+    # render 'api/pins/index'w
   end
 
   def show
