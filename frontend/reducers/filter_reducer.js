@@ -1,7 +1,7 @@
 import { UPDATE_FILTER } from '../actions/filter_actions';
 
 const defaultFilters = Object.freeze({
-  bounds: {},
+  query: {},
 });
 
 const filtersReducer = (state = defaultFilters, action) => {
