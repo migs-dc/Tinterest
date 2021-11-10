@@ -7,7 +7,7 @@ const mSTP = (state) => {
 }
 
 const mDTP = dispatch => ({
-  updateFollowers: id => dispatch(fetchFollowers(id));
+  // updateFollowers: id => dispatch(fetchFollowers(id));
 })
 
 export default connect(mSTP, mDTP)(follows);
