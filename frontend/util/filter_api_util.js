@@ -1,0 +1,3 @@
+class filterUtil {
+  constructor()
+}
